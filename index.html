@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/verdata.js"></script>
+    <script src="js/namedgraphs.js"></script>
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse"
+		  data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">VerData</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">Acerca de</a></li>
+              <li><a href="#contact">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="hero-unit">
+        <h1>¡Bienvenido a VerData!</h1>
+        <p>Verdata es un repositorio de datos enlazados y de visualizaciones
+	  de ellos, especialmente dedicado a datos enlazados generados a
+	  partir de datos públicos de Chile.</p>
+        <p><a href="#" class="btn btn-primary btn-large">Saber más &raquo;</a></p>
+      </div>
+
+      <h1>Grafos disponibles</h1>
+      <table id="named-graph-list" class="table">
+	<tbody>
+	  <tr>
+	    <th>Grafo</th>
+	    <th>Nº de Triples</th>
+	  </tr>
+	</tbody>
+      </table>
+
+    </div>
+
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
