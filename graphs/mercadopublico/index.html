@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../../css/verdata.css" rel="stylesheet" media="screen">
+	<link href="css/jpages.css" rel="stylesheet" media="screen">
     <script src="../../js/jquery-2.0.3.min.js"></script>
     <script src="../../js/verdata.js"></script>
     <script src="js/script.js"></script>
+	<script src="js/jpages.js"></script>
+	<script type='text/javascript'>
+        $('div.holder').jPages({
+			containerID: "data",
+			perPage: 10
+		});
+    </script>
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -33,16 +41,13 @@
 
     <div class="container">
 
-      <h1>Grafo Demo</h1>
+      <h1>Grafo Mercado Público</h1>
 
-      <p>Este es uno de los grafos de ejemplo que trae Fuseki. Mírenlo como
-        ejemplo de partida para hacer una consulta y presentar los datos.</p>
-
-      <table id="named-graph-list" class="table">
-        <tbody>
-          <tr>
-            <th>Número Adquisición</th>
-            <th>Tipo</th>
+      <p>Grafo que muestra las distintas licitaciones de la página www.mercadopublico.cl para la Región del Maule y que hayan sido publicadas en el mes de Diciembre del año 2013. Estas se ordenan por fecha.</p>
+      <div class="holder">
+	  <table id="named-graph-list" class="table">
+        <thead>
+			<tr>
             <th>Nombre</th>
 			<th>Descripción</th>
 			<th>Organismo</th>
@@ -50,17 +55,13 @@
 			<th>Fecha Publicación</th>
 			<th>Fecha Cierre</th>
 			<th>Descripción Producto/Servicio</th>
-			<th>ONU</th>
-			<th>Unidad de Medida</th>
 			<th>Cantidad</th>
-			<th>Genérico</th>
-			<th>Nivel 1</th>
-			<th>Nivel 2</th>
-			<th>Nivel 3</th>
           </tr>
+		</thead>
+		<tbody id="data">
         </tbody>
       </table>
-
+	  </div>
     </div>
 
     <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
