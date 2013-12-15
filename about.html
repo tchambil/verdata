@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/verdata.css" rel="stylesheet" media="screen">
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/verdata.js"></script>
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse"
+		  data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">VerData</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">Acerca de</a></li>
+              <li><a href="#contact">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <h1>¿Cómo aportar datos?</h1>
+
+      <p>Las siguientes son algunas guías para publicar datos en Verdata, que
+      será útil por el momento, en el contexto del curso de Bases de Datos
+      Avanzadas de la Universidad de Talca. Hay varios detalles en la
+      publicación que habrá que mejorar antes de sacar la primera versión
+      abierta de Verdata.</p>
+
+      <h2>Sube tus datos en un grafo</h2>
+      <p>Verdata sigue la estrategia de publicar datos de una fuente o tema
+      común en un mismo <em>named graph</em>. En un principio, se prefiere
+      publicar los datos poniendo atención en la consistencia de los datos
+      dentro de cada grafo en vez de prestar exigir demasiado en la
+      integración con los demás grafos. Sin embargo, Verdata deberá tener una
+      política para gestionar el trabajo de curación, en el cual los grafos
+      puedan ir puliéndose e integrándose entre sí.</p>
+
+      <p>Para comenzar a publicar datos en Verdata debes definir un
+      vocabulario y los datos de manera de que, al menos, sean consistentes al
+      nivel del grafo. Luego puedes codificar los datos en un archivo Turtle
+      y subirlos en la interfaz de Fuseki, en el dataset verdata e indicando
+      el nombre del grafo en el cual incorporarás los datos.</p>
+
+      <h2>Crea una página de inicio a tu grafo</h2>
+      <p>En la página de inicio hay un listado de los grafos que hay
+      Verdata. Cada uno de estos grafos debiera tener un hipervínculo hacia
+      la página de inicio del grafo. En principio las IRIs del grafo y de la
+      página de incio debieran ser distintas, pero por el momento omitiremos
+      este detalle.</p>
+
+      <p>El
+      grafo <code>/graphs/demo</code>
+      puede servir de ejemplo para entender cómo hacer una consulta y cómo
+      utilizar los datos para generar la vista. En el
+      archivo <code>/js/verdata.js</code> se
+      define la función <code>sparql(query, fun)</code> que envía la
+	consulta codificada en <code>query</code> a la base de datos y utiliza
+      los datos obtenidos con la
+      función <code>fun</code>. En <code>/graphs/demo</code>
+      la consulta consiste en obtener todos las tripletas del grafo y la
+      función las despliega dentro de una tabla en la página de inicio del grafo.</p>
+
+      <p>Para comenzar a crear tu nuevo grafo debes hacer un fork del código
+      de Verdata en <a href="https://github.com/danielhz/verdata">su
+      repositorio de Github</a>. Luego, cuando hayas creado el código para tu
+      grafo en una carpeta en <code>/graphs</code>, envía un
+	<em>pull request</em> al repositorio original.</p>
+
+      <p>Es encesario que en la página de inicio agregues la siguiente
+      información:</p>
+
+      <ol>
+	<li>El título del grafo.</li>
+	<li>La fuente de la que fueron sacados los datos.</li>
+	<li>La fecha en la que los datos fueron recolectados y subidos a
+	Verdata.</li>
+	<li>Una descripción breve de lo que contienen los datos.</li>
+	<li>Las personas que trabajaron en reunier los datos, modelarlos como
+	datos enlazados y agregarlos a verdata.</li>
+      </ol>
+
+      <h2>Crea una vista de tus datos</h2>
+      <p>La página de inicio debiera proveer una vista de los datos con las
+      siguientes características:</p>
+      <ol>
+	<li>No deben traer toda la base de datos. No es recomendable traer
+	grandes volúmenes de datos a un navegador. Es mejor entregar alguna
+	vista resumida o agregada de los datos o, en el caso de necesitar
+	listar más datos de los que quepan en una pantalla, es preferible
+	paginarlos.</li>
+	<li>Resuelva algunas de las inquietudes que ustedes tenían
+	originalmente sobre los datos. Algo que demuestre que los datos son
+	interesantes.</li>
+	<li>Sea explicativa de los datos que hay en el grafo.</li>
+      </ol>
+    </div>
+
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
