@@ -3,7 +3,7 @@
 sparql(
     // Consulta
     "SELECT distinct ?s ?p ?o " +
-    "WHERE { GRAPH <http://verdata.cl/graphs/demo> { ?s ?p ?o } } ",
+    "WHERE { GRAPH <http://verdata.cl/graphs/demo/> { ?s ?p ?o } } ",
     // Acción
     function(data) {
 	$.each(data.results.bindings, function(index, value) {

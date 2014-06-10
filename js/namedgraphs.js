@@ -12,7 +12,7 @@ sparql(
 		$('<tr>')
 		    .append($('<td>').append(
 			$('<a>')
-			    .attr('href',value.g.value.replace('http://verdata.cl/','') + '/index.html')
+			    .attr('href',value.g.value.replace('http://verdata.cl/','') + 'index.html')
 			    .text(value.g.value)))
 		    .append($('<td>').text(value.q.value))
 	    );
