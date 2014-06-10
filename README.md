@@ -15,17 +15,20 @@ Howto contribute
 
         git checkout development
 
-4. Init git flow.
+4. Init git flow accepting default values.
 
         git flow init
 
-5. Make some changes and commit them.
+5. Make some changes in a new feature branch and commit them.
 
-        git add something
+        git flow feature start {feature-name}
+        git add {something}
         git commit
+        git push
 
-6. Push your changes.
+6. When you finish your changes close your feature
 
+        git flow feature finish {feature-name}
         git push
 
 7. Create a pull request in github.
