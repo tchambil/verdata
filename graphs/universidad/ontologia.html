@@ -1,0 +1,118 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link rel="shortcut icon" href="Imagenes/iconewucv.ico" type="image/ico" />
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>
+	Universidades del Peru
+</title>
+<meta content="img/ucv.jpg" property="og:image" />
+<meta name="description" /> 
+<script type="text/javascript" src="http://www.google.com/jsapi"></script> 
+	<link rel="stylesheet" href="style/normalize.css" />
+	<link rel="stylesheet" href="style/main.css" />
+	<link rel="stylesheet" href="style/general.css" />
+	  <script src="json/jquery-2.0.3.min.js"></script>
+	  <script src="json/verdata.js"></script>
+	<script src="json/scripts.js"></script>
+	<script src="json/suniversidad.js"></script>
+	<script>
+	    function sobre(obj) {
+	        var classes = obj.className.split(/\s+/);
+	        var ciudad = classes[1].substr(2, 3);
+	        $(".pt" + ciudad).toggleClass("ptSobre");
+	        $(".et" + ciudad).toggleClass("etSobre");
+	        $(".sd" + ciudad).toggleClass("sdSobre");
+	    }
+	    $(function() {
+	        $(".pt").hover(function() { sobre(this); });
+	        $(".et").hover(function() { sobre(this); });
+	        $(".sd").hover(function() { sobre(this); });
+	    });
+	</script>
+    
+    <script type="text/javascript">
+    
+      function pageLoad() {
+      }
+    
+    </script>
+    
+    <script type="text/javascript" language="JavaScript">
+        function cerrara(id) {
+            div = document.getElementById(id);
+            div.style.display = 'none';
+        }
+    </script>
+   
+    
+    </head>
+<body class="fondoAzul">
+   
+
+    <form name="form1" method="post" action="home.aspx" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUIMTY0MjQ1OTgPZBYCAgMPZBYCAgEPDxYCHgRUZXh0ZWRkZPW5GLD3fnad8rh5ARv7NZA6/8iI" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+<div>
+ <div id="todo">
+			<div id="portada" >
+				<nav id="menuSuperior">
+					<ul>
+						<li>
+                            <span id="LblPopup"></span>
+                        <a href="index.html" target="_self">Inicio</a></li>
+						<li><a href="documentacion.html" target="_self">Documentacion</a></li>
+						<li><a href="ontologia.html" target="_self">Ontologias</a></li>
+						<li><a href="sparql.html" target="_self">SPARQL</a></li>
+						<li><a href="about.html" target="_self">Acerca Proyecto</a></li>
+						<li>Contactanos</li>
+						<li><a id="facebook" class="ir" href="https://www.facebook.com/Peru" target="_blank">Facebook</a></li>
+					</ul>
+				</nav><!-- menuSuperior -->
+				<div class="quiebre"></div>
+				<nav id="mapa">
+					 
+				</nav><!-- mapa -->
+				<div id="charts" class="et chart">
+
+						<div id="grafico">
+							Resumen		
+						</div>
+				
+				</div>
+				<div id="presentacion"> 
+					<p id="introduccion"> laboratorios.</p>
+					 				</div>
+				<div id="pie" class="quiebre">
+					<p id="copy">2014 Departamento de Computacion - Universidad de Chile</p>
+				</div>
+			</div><!-- portada -->
+		</div><!-- todo -->
+       
+    </div>
+    
+</form>
+ 
+</body>
+</html>

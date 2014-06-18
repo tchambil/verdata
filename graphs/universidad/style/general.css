@@ -1,0 +1,389 @@
+.fondoAzul{
+	background: url(../img/bgAzul.png) #4080b0 repeat-x;
+}
+
+/*****************************************************************/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.invisible{
+	display:none;
+}
+
+.puntero{
+	cursor: default;
+	color: #aDD3FF !important;
+}
+
+.quiebre{
+	clear: both;
+}
+
+#todo{
+	color: #ffffff;
+	margin-top: 40px;
+}
+
+#portada{
+	width: 940px;
+	height:600px;
+	padding: 20px;
+	margin: 0 auto;
+	background: url(../img/mapa.png) no-repeat 20px 20px;
+}
+#portada0{
+	width: 940px;
+	height:600px;
+	padding: 20px;
+	margin: 0 auto;
+	background: url(../img/clasess.png) no-repeat 20px 20px;
+}
+/*****************************************************************/
+#menuSuperior{
+	width: 940px;
+	height:30px;
+}
+
+#menuSuperior ul{
+	float:right;
+}
+
+#menuSuperior li{
+	padding: 0 0 0 12px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 12px;
+}
+
+#menuSuperior a{
+	color:#00adff;
+	text-decoration: none;
+}
+
+#menuSuperior a:hover{
+	text-decoration: underline;
+}
+
+#menuSuperior #contacto{
+	color:#7dd3ff;
+}
+
+#menuSuperior #twitter{
+	width: 30px;
+	height: 30px;
+	background: url(../img/twitter.png) no-repeat;
+	display: block;
+}
+
+#menuSuperior #facebook{
+	width: 30px;
+	height: 30px;
+	background: url(../img/facebook.png) no-repeat;
+	display: block;
+}
+
+/*****************************************************************/
+#mapa{
+	float: left;
+	width: 470px;
+	height: 555px;
+	position: relative;
+}
+#clases{
+	float: left;
+	width: 470px;
+	height: 555px;
+	position: relative;
+}
+
+.pt{
+	background: url(../img/punto.png) no-repeat;
+	display: block;
+	position: absolute;
+	width: 15px; 
+	height: 15px;
+}
+
+.ptSobre{
+	background: url(../img/puntoSobre.png) no-repeat;
+}
+
+.et{
+	color: #ffffff;
+	text-decoration: none;
+	position: absolute;
+	font-size: 9px;
+	padding: 0 1px;
+}
+
+.etSobre{
+	background: #00ADFF;
+}
+
+.sdSobre{
+	background: #00ADFF;
+}
+.title{top: 50px;	left: 10px;}
+.subtitle{top: 100px;	left: 30px;}
+.titlechart{top: 585px;	left: 140px;}
+.ontologia{top: 100px;	left: -60px;}
+.chart{top: 300px;	left: -60px;}
+.ptTumbes{	top: 110px;	left: 54px;}
+.etTumbes{	top: 110px;	left: 5px;}
+
+.ptCajamarca{	top: 160px;	left: 120px;}
+.etCajamarca{	top: 145px;	left: 110px;}
+
+.ptAmazonas{	top: 205px;	left: 110px;}
+.etAmazonas{	top: 195px;	left: 100px;}
+
+.ptUcayali{	top: 290px;	left: 260px;}
+.etUcayali{	top: 278px;	left: 255px;}
+
+
+
+.ptHuanuco{	top: 262px;	left: 180px;}
+.etHuanuco{	top: 275px;	left: 170px;}
+
+.ptPasco{	top: 305px;	left: 175px;}
+.etPasco{	top: 300px;	left: 190px;}
+
+
+
+
+
+.ptIquitos{	top: 135px;	left: 175px;}
+.etIquitos{	top: 135px;	left: 199px;}
+
+.ptLambayeque{	top: 185px;	left: 75px;}
+.etLambayeque{	top: 195px;	left: 10px;}
+
+.ptAncash{	top: 265px;	left: 127px;}
+.etAncash{	top: 275px;	left: 65px;}
+
+
+.ptLima{	top: 328px;	left: 159px;}
+.etLima{	top: 328px;	left: 115px;}
+
+.ptCallao{	top: 350px;	left: 172px;}
+.etCallao{	top: 350px;	left: 120px;}
+
+
+.ptPiura{	top: 150px;	left: 54px;}
+.etPiura{	top: 150px;	left: 5px;}
+
+.ptSan_Martin{	top: 215px;	left: 167px;}
+.etSan_Martin{	top: 202px;	left: 144px;}
+
+.ptJunin{	top: 326px;	left: 230px;}
+.etJunin{	top: 326px;	left: 200px;}
+
+.ptLa_Libertad{	top: 236px;	left: 112px;}
+.etLa_Libertad{	top: 235px;	left: 50px;}
+
+.ptHuancavelica{	top: 380px;	left: 210px;}
+.etHuancavelica{	top: 370px;	left: 180px;}
+
+.ptIca{	top: 400px;	left: 190px;}
+.etIca{	top: 400px;	left: 160px;}
+
+.ptAyacucho{	top: 420px;	left: 240px;}
+.etAyacucho{	top: 410px;	left: 215px;}
+
+.ptApurimac{	top: 405px;	left: 280px;}
+.etApurimac{	top: 395px;	left: 260px;}
+
+.ptCuzco{	top: 395px;	left: 310px;}
+.etCuzco{	top: 380px;	left: 300px;}
+
+.ptMadre_de_Dios{	top: 360px;	left: 345px;}
+.etMadre_de_Dios{	top: 345px;	left: 315px;}
+
+.ptPuno{	top: 440px;	left: 345px;}
+.etPuno{	top: 425px;	left: 345px;}
+
+.ptArequipa{	top: 460px;	left: 285px;}
+.etArequipa{	top: 470px;	left: 210px;}
+
+.ptMoquegua{	top: 484px;	left: 322px;}
+.etMoquegua{	top: 499px;	left: 250px;}
+
+.ptTacna{	top: 502px;	left: 340px;}
+.etTacna{	top: 515px;	left: 295px;}
+/*****************************************************************/
+#presentacion{
+	float: left;
+	width: 470px;
+	height: 555px;
+}
+
+#portada #logoUCV{
+	width: 240px; 
+	height: 40px;
+	background: url(../img/logoUCV.png) no-repeat;
+	margin: 85px 0 0 0;
+}
+
+#portada #titulo{
+	margin: 70px 0 0 0;
+	width: 415px; 
+	height: 14px;
+	background: url(../img/titulo.png) no-repeat;
+}
+#title #titulos{
+	margin: 100px -10 -10 10;
+	width: 415px; 
+	height: 50px;
+	background: url(../img/logoUCV.png) no-repeat;
+
+}
+ 
+
+#portada #introduccion{
+	margin: 10px 0 0 0;
+	width: 430px;
+}
+#portada0 #introduccion{
+	margin: 10px 0 0 0;
+	width: 430px;
+}
+.linea{
+	background: #ffffff;
+	height: 1px;
+	display: block;
+}
+
+#campus{
+	margin: 30px 0 0 0;
+	width: 430px;
+	overflow: hidden;
+	border-bottom: #ffffff 1px solid;
+}
+
+#elige{
+	width: 430px;
+	background: url(../img/lineaElige.png) no-repeat 0px 8px;
+	text-align: center;
+	font-style: italic;
+
+	margin: 0em 0;
+}
+
+#campus ul{
+	margin: 0 0 17px 0;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.col1{
+	width: 0%;
+	padding: 10px 20px 10px 10px;
+}
+
+.col2{
+	width: 25%;
+	padding: 0 10% 0 0;
+}
+
+#campus ul li{
+	padding: 7px 0;
+}
+
+#campus a{
+	color: #ffffff;
+	text-decoration: none;
+	padding: 0 3px;
+}
+
+/*****************************************************************/
+#pie{
+	color:#ffffff;
+	width: 940px;
+	height:15px;
+	text-align: center;
+}
+
+
+/****************************************************************/
+
+#pag_contacto{
+	width: 940px;
+	height:600px;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+#pag_contacto #logoUCV{
+	width: 240px; 
+	height: 40px;
+	background: url(../img/logoUCV.png) no-repeat;
+	float: left;
+}
+
+#pag_contacto #titulo{
+	margin: 80px 0 0 0;
+	width: 112px; 
+	height: 18px;
+	background: url(../img/titulo_contactanos.png) no-repeat;
+}
+
+#pag_contacto #introduccion{
+	margin: 10px 0 0 0;
+}
+
+#todos{
+	margin: 40px 0 0 0;
+}
+
+#datos_campus{
+	background: #0e4f8c;
+	width: 200px;
+	display: inline-block;
+	margin: 0 0 20px 17px;
+	padding: 10px;
+	vertical-align: top;
+	transition: all 0.3s ease;
+}
+
+#datos_campus:hover{
+	background: #092a64;
+}
+
+#datos_campus:first-child{
+	margin: 0 0 20px 0;
+}
+
+h2{
+	background: #0991db;
+	padding: 9px;
+	font-size: 12px;
+}
+
+h2 a{
+	color: #fff;
+	text-decoration: none;
+}
+
+h2 a:hover{
+	text-decoration: underline;
+}
+
+#datos{
+	background: #197cbc;
+	padding: 18px 9px 5px 9px;
+	height: 90px;
+}
+
+#datos p{
+	margin:  0 0 5px 0;
+}
+

@@ -1,73 +1,264 @@
-<!DOCTYPE HTML>
-<html>
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<head>
- <title>Escuelas Profesionas de Computacion</title>
-  <meta name="description" content="Escuelas profesionales de computacion  y sistemas" />
-  <meta name="keywords" content="Computacion, Sistemas, Informatica, Telecomunicaciones" />
-  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-  <link rel="stylesheet" type="text/css" href="style/style.css" />
-</head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link rel="shortcut icon" href="Imagenes/iconewucv.ico" type="image/ico" />
+<meta charset="utf-8"/>
 
-<body>
-  <div id="main">
-    <div id="header">
-       <div id="logo">
-        <div id="logo_text">
-          <h1><a href="index.html"><span class="logo_colour">Computacion y Sistemas</span></a></h1>
-          <h2>Escuelas Profesionales</h2>
-        </div>
-      </div>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>
+	Universidades del Peru
+</title>
+<meta content="img/ucv.jpg" property="og:image" />
+<meta name="description" /> 
+<script type="text/javascript" src="http://www.google.com/jsapi"></script> 
+	<link rel="stylesheet" href="style/normalize.css" />
+	<link rel="stylesheet" href="style/main.css" />
+	<link rel="stylesheet" href="style/general.css" />
+	  <script src="json/jquery-2.0.3.min.js"></script>
+	  <script src="json/verdata.js"></script>
+	<script src="json/scripts.js"  charset="utf-8"></script>
+	<script src="json/suniversidad.js"></script>
+	<script>
+	    function sobre(obj) {
+	        var classes = obj.className.split(/\s+/);
+	        var ciudad = classes[1].substr(2, 20);
+	        $(".pt" + ciudad).toggleClass("ptSobre");
+	        $(".et" + ciudad).toggleClass("etSobre");
+	        $(".sd" + ciudad).toggleClass("sdSobre");
+	    }
+	    $(function() {
+	        $(".pt").hover(function() { sobre(this); });
+	        $(".et").hover(function() { sobre(this); });
+	        $(".sd").hover(function() { sobre(this); });
+	    });
+	</script>
+    <script type="text/javascript">
 
-      <div id="menubar">
-        <ul id="menu"> 
-         <li class="selected"><a href="index.html">Inicio</a></li>
-          <li class="selected"><a href="personas.html">Personas</a></li>
-          <li class="selected"><a href="universidad.html">Universidades</a></li>
-          <li class="selected"><a href="escuela.html">Escuelas Profesionales</a></li>
-          <li class="selected"><a href="contact.html">Contacto</a></li>
-        </ul>
-      </div>
+    </script>
+    <script type="text/javascript">
+    
+      function pageLoad() {
+      }
+    
+    </script>
+    
+    <script type="text/javascript" language="JavaScript">
+        function cerrara(id) {
+            div = document.getElementById(id);
+            div.style.display = 'none';
+        }
+    </script>
+   
+    
+    </head>
+<body class="fondoAzul">
+   
+
+    <form name="form1" method="post" action="home.aspx" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUIMTY0MjQ1OTgPZBYCAgMPZBYCAgEPDxYCHgRUZXh0ZWRkZPW5GLD3fnad8rh5ARv7NZA6/8iI" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+<div>
+ <div id="todo">
+			<div id="portada">
+				<nav id="menuSuperior">
+					<ul>
+						<li>
+                            <span id="LblPopup"></span>
+                        <a href="index.html" target="_self">Inicio</a></li>
+						<li><a href="documentacion.html" target="_self">Documentacion</a></li>
+						<li><a href="ontologia.html" target="_self">Ontologias</a></li>
+						<li><a href="sparql.html" target="_self">SPARQL</a></li>
+						<li><a href="about.html" target="_self">Acerca Proyecto</a></li>
+						<li>Contactanos</li>
+						<li><a id="facebook" class="ir" href="https://www.facebook.com/Peru" target="_blank">Facebook</a></li>
+					</ul>
+				</nav><!-- menuSuperior -->
+				 
+				<div class="quiebre"></div>
+				<nav id="mapa">
+					<ul>
+						<li>
+							<a class="pt ptCajamarca" href="#"><span class="invisible">Cajamarca</span></a>
+							<a class="et etCajamarca" href="#">Cajamarca</a>
+						</li>
+						<li>
+							<a class="pt ptAmazonas" href="#"><span class="invisible">Amazonas</span></a>
+							<a class="et etAmazonas" href="#">Amazonas</a>
+						</li>
+
+						<li>
+							<a class="pt ptUcayali" href="#"><span class="invisible">Ucayali</span></a>
+							<a class="et etUcayali" href="#" >Ucayali</a>
+						</li>
+
+							<li>
+							<a class="pt ptTumbes" href="#"><span class="invisible">TUMBES</span></a>
+							<a class="et etTumbes" href="#">TUMBES</a>
+						</li>
+						<li>
+							<a class="pt ptLambayeque" href="#"><span class="invisible">Lambayeque</span></a>
+							<a class="et etLambayeque" href="#">Lambayeque</a>
+						</li>
+						
+						<li>
+							<a class="pt ptHuanuco" href="#"><span class="invisible">Huanuco</span></a>
+							<a class="et etHuanuco" href="#">Huanuco</a>
+						</li>
+						<li>
+							<a class="pt ptPasco" href="#"><span class="invisible">Cerro de Pasco</span></a>
+							<a class="et etPasco" href="#">Cerro de Pasco</a>
+						</li>
+						 
+						<li>
+							<a class="pt ptAncash" href="#"><span class="invisible">ANCASH</span></a>
+							<a class="et etAncash" href="#">ANCASH</a>
+						</li>
+
+						<li>
+						    <a class="pt ptCallao" href="#"><span class="invisible">CALLAO</span></a>
+							<a class="et etCallao" href="#">CALLAO</a>
+						</li>
+
+						<li>
+							<a id="lima" class="pt ptLima" href="#"><span class="invisible">LIMA</span></a>
+							<a class="et etLima" href="#">LIMA</a>
+						</li>
+						<li>
+							<a class="pt ptIquitos" href="#"><span class="invisible">IQUITOS</span></a>
+							<a class="et etIquitos" href="#">IQUITOS</a>
+						</li>
+						<li>
+							<a class="pt ptPiura" href="#"><span class="invisible">PIURA</span></a>
+							<a class="et etPiura" href="#">PIURA</a>
+						</li>
+						<li>
+							<a class="pt ptSan_Martin" href="#"><span class="invisible">San Martin</span></a>
+							<a class="et etSan_Martin" href="#">San Martin</a>
+						</li>
+						<li> 
+							<a class="pt ptLa_Libertad" href="#"><span class="invisible">LA_LIBERTAD</span></a>
+							<a class="et etLa_Libertad" href="#">LA LIBERTAD</a>
+						</li>
+
+						<li>
+							<a class="pt ptJunin" href="#"><span class="invisible">Junin</span></a>
+							<a class="et etJunin" href="#">Junin</a>
+						</li>
+
+						<li>
+							<a class="pt ptHuancavelica" href="#"><span class="invisible">Huancavelica</span></a>
+							<a class="et etHuancavelica" href="#">Huancavelica</a>
+						</li>
+
+						<li>
+							<a class="pt ptIca" href="#"><span class="invisible">ICA</span></a>
+							<a class="et etIca" href="#">ICA</a>
+						</li>
+
+						<li>
+							<a class="pt ptAyacucho" href="#"><span class="invisible">Ayacucho</span></a>
+							<a class="et etAyacucho" href="#">Ayacucho</a>
+						</li>
+						<li>
+							<a class="pt ptApurimac" href="#"><span class="invisible">Apurimac</span></a>
+							<a class="et etApurimac" href="#">Apurimac</a>
+						</li>
+						<li>
+							<a class="pt ptCuzco" href="#"><span class="invisible">CUZCO</span></a>
+							<a class="et etCuzco" href="#">CUZCO</a>
+						</li>
+
+						<li>
+							<a class="pt ptMadre_de_Dios" href="#"><span class="invisible">Madre de Dios</span></a>
+							<a class="et etMadre_de_Dios" href="#">Madre de Dios</a>
+						</li>
+
+						<li>
+							<a class="pt ptPuno" href="#"><span class="invisible">PUNO</span></a>
+							<a class="et etPuno" href="#">PUNO</a>
+						</li>
+
+						<li>
+							<a class="pt ptArequipa" href="#"><span class="invisible">AREQUIPA</span></a>
+							<a class="et etArequipa" href="#">AREQUIPA</a>
+						</li>
+						<li>
+							<a class="pt ptMoquegua" href="#"><span class="invisible">MOQUEGUA</span></a>
+							<a class="et etMoquegua" href="#">MOQUEGUA</a>
+						</li>
+
+						<li>
+							<a class="pt ptTacna" href="#"><span class="invisible">TACNA</span></a>
+							<a class="et etTacna" href="#">TACNA</a>
+						</li>
+					</ul>
+				</nav><!-- mapa -->
+				<div id="title">
+					<div id="titulos" class="et title">
+ 						
+					</div>
+						<div class="et subtitle" >
+						 	 
+						 		<p>Accede a un conjunto de datos en formatos que permiten </p>
+						 		<p> su manipulación y reutilización en desarrollos informáticos.</p>
+				</div>
+
+				</div>
+				
+				<div id="charts" class="et chart">
+						<div id="graficos">
+							Resumen		
+						</div>
+				</div>
+				<div id="titlecharst" class ="et titlechart">
+					<div>
+						Cantidad de Data
+					</div>
+				</div>
+				<div id="presentacion" font size="6">
+				
+				<div id="logoUCV" class="ir">UNIVERSIDAD DEL PERU</div>
+				<h1 id="titulo" class="ir">Escuelas profesionales de Computacion</h1>
+				 	<ul>
+					   <li type="circle">
+						Dataset de Escuelas de Profesionales de Computacion, Sistemas e Informatica de todas las Universidades del Peru donde podras obtener informacion acerca de Cursos, Docentes, Alumnos, Investigación, admisión, laboratorios.
+					 	</li>
+				 	</ul>
+					<nav id="campus">
+						<p id="elige">Elige tu Universidad</p>
+						<nav id="listaUniv">
+						</nav>
+					</nav>
+				</div>
+				<div id="pie" class="quiebre">
+					<p id="copy">2014 Departamento de Computacion - Universidad de Chile</p>
+				</div>
+			</div><!-- portada -->
+		</div><!-- todo -->
+       
     </div>
-    <div id="content_header"></div>
-    <div id="site_content">
-      <div id="banner"></div>
-	  <div id="sidebar_container">
-        <div class="sidebar">
-          <div class="sidebar_top"></div>
-          <div class="sidebar_item">
-            <h1>Informacion...</h1> 
-             <p>Informacion Informacion Informacion Informacion Informacion Informacion.<br /><a href="#">Ver mas</a></p>
-            
-          </div>
-          <div class="sidebar_base"></div>
-        </div>
-        <div class="sidebar">
-          <div class="sidebar_top"></div>
-          <div class="sidebar_item">
-            <h3>Algunos Links</h3>
-            <ul>
-              <li><a href="#">link 1</a></li>
-              <li><a href="#">link 2</a></li>
-              <li><a href="#">link 3</a></li>
-              <li><a href="#">link 4</a></li>
-            </ul>
-          </div>
-          <div class="sidebar_base"></div>
-        </div>
-        <div class="sidebar">
-           
-        </div>
-      </div>
-      <div id="content">
-       <h1>Bienvenidos....</h1>
-        
-      </div>
-    </div>
-    <div id="content_footer"></div>
-    <div id="footer">
-      <p><a href="index.html">Inicio</a> | <a href="personas.html">Personas</a> | <a href="universidad.html">Uniersidad</a> | <a href="escuela.html">Escuela Profesional</a> | <a href="contact.html">Contacto</a></p>
-    </div>
-  </div>
+    
+</form>
+ 
 </body>
 </html>
