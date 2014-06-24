@@ -39,12 +39,19 @@ body{
 	margin: 0 auto;
 	background: url(../img/mapa.png) no-repeat 20px 20px;
 }
-#portada0{
-	width: 940px;
-	height:600px;
+#ontologias{
+	width: 900px;
+	height:750px; 
+	background: url(../img/clases.png) no-repeat 20px 20px;
+	 
+}
+#java{
+		
+		width: 500px;
+	height:450px;
 	padding: 20px;
-	margin: 0 auto;
-	background: url(../img/clasess.png) no-repeat 20px 20px;
+	background: url(../img/java.png) no-repeat 20px 20px;
+}
 }
 /*****************************************************************/
 #menuSuperior{
@@ -112,6 +119,16 @@ body{
 	width: 15px; 
 	height: 15px;
 }
+ #submit {
+ color: #fff;
+ font-size: 0;
+ width: 135px;
+ height: 60px;
+ border: none;
+ margin: 0;
+ padding: 0;
+ background: #0c0 url(image) 0 0 no-repeat; 
+}
 
 .ptSobre{
 	background: url(../img/puntoSobre.png) no-repeat;
@@ -132,10 +149,13 @@ body{
 .sdSobre{
 	background: #00ADFF;
 }
+.titulojava{top: 85px;	left: 700px;}
+.resultado{top: 110px;	left: 700px;}
+.sparql{top: 50px;	left: 100px;}
+.ontologia{top: 0px;	left: -15px;}
 .title{top: 50px;	left: 10px;}
 .subtitle{top: 100px;	left: 30px;}
 .titlechart{top: 585px;	left: 140px;}
-.ontologia{top: 100px;	left: -60px;}
 .chart{top: 300px;	left: -60px;}
 .ptTumbes{	top: 110px;	left: 54px;}
 .etTumbes{	top: 110px;	left: 5px;}

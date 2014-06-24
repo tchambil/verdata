@@ -13,97 +13,96 @@
 	<link rel="stylesheet" href="style/normalize.css" />
 	<link rel="stylesheet" href="style/main.css" />
 	<link rel="stylesheet" href="style/general.css" />
+	<script type="text/javascript"></script>
 	  <script src="json/jquery-2.0.3.min.js"></script>
-	  <script src="json/verdata.js"></script>
-	<script src="json/scripts.js"></script>
-	<script src="json/suniversidad.js"></script>
-	<script>
-	    function sobre(obj) {
-	        var classes = obj.className.split(/\s+/);
-	        var ciudad = classes[1].substr(2, 3);
-	        $(".pt" + ciudad).toggleClass("ptSobre");
-	        $(".et" + ciudad).toggleClass("etSobre");
-	        $(".sd" + ciudad).toggleClass("sdSobre");
-	    }
-	    $(function() {
-	        $(".pt").hover(function() { sobre(this); });
-	        $(".et").hover(function() { sobre(this); });
-	        $(".sd").hover(function() { sobre(this); });
-	    });
-	</script>
-    
-    <script type="text/javascript">
-    
-      function pageLoad() {
-      }
-    
-    </script>
-    
-    <script type="text/javascript" language="JavaScript">
-        function cerrara(id) {
-            div = document.getElementById(id);
-            div.style.display = 'none';
-        }
-    </script>
-   
-    
-    </head>
+
+ </head>
 <body class="fondoAzul">
-   
-
-    <form name="form1" method="post" action="home.aspx" id="form1">
-<div>
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUIMTY0MjQ1OTgPZBYCAgMPZBYCAgEPDxYCHgRUZXh0ZWRkZPW5GLD3fnad8rh5ARv7NZA6/8iI" />
-</div>
-
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['form1'];
-if (!theForm) {
-    theForm = document.form1;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
-
-<div>
+ <div>
  <div id="todo">
-			<div id="portada" >
+			<div id="portada00" >
 				<nav id="menuSuperior">
 					<ul>
 						<li>
-                            <span id="LblPopup"></span>
-                        <a href="index.html" target="_self">Inicio</a></li>
+                         <span id="LblPopup"></span> 
+                         <a href="index.html" target="_self">Inicio</a></li>
 						<li><a href="documentacion.html" target="_self">Documentacion</a></li>
 						<li><a href="ontologia.html" target="_self">Ontologias</a></li>
-						<li><a href="sparql.html" target="_self">SPARQL</a></li>
-						<li><a href="about.html" target="_self">Acerca Proyecto</a></li>
+						<li><a href="sparql.html" target="_self">SPARQL</a></li> 
 						<li>Contactanos</li>
 						<li><a id="facebook" class="ir" href="https://www.facebook.com/Peru" target="_blank">Facebook</a></li>
 					</ul>
 				</nav><!-- menuSuperior -->
-				<div class="quiebre"></div>
-				<nav id="mapa">
-					 
-				</nav><!-- mapa -->
-				<div id="charts" class="et chart">
-
-						<div id="grafico">
-							Resumen		
-						</div>
-				
-				</div>
 				<div id="presentacion"> 
-					<p id="introduccion"> laboratorios.</p>
-					 				</div>
+				 <div id="consultas" class="et sparql">
+				 <form  style="margin:0px"smethod="post">
+				   <ul>
+<li type="circle">	Primera Consulta			</li>
+<p> Mostrar cantidad de Universidades por departamento
+<P>
+<textarea readonly NAME="consulta1" cols=120 rows=10   style="color: red; background-color: lightyellow">
+ prefix r: <http://verdata.cl/graphs/computacion#> 
+    SELECT ?sede  (count(?sede) as ?cant) 
+    WHERE   {graph <http://example/computacion> 
+     { ?uni a  r:Universidad. 
+    ?uni r:sede ?sede.
+    ?uni r:nombre ?nombre.} } 
+    group by ?sede 
+    order by asc(?sede)
+</textarea>
+<p><a href="http://sparql.verdata.cl/verdata/sparql?query=prefix+r%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%23%3E+%0D%0A++++SELECT+%3Fsede++%28count%28%3Fsede%29+as+%3Fcant%29+%0D%0A++++WHERE+++%7Bgraph+%3Chttp%3A%2F%2Fexample%2Fcomputacion%3E+%0D%0A+++++%7B+%3Funi+a++r%3AUniversidad.+%0D%0A++++%3Funi+r%3Asede+%3Fsede.%0D%0A++++%3Funi+r%3Anombre+%3Fnombre.%7D+%7D+%0D%0A++++group+by+%3Fsede+%0D%0A++++order+by+asc%28%3Fsede%29&output=text&stylesheet=" target="_self" title="Ejecutar Consulta">
+<font color="white">Ejecutar Consulta</font></a>
+<p><br></p>	
+ <li type="circle">	Segunda Consulta </li> 
+   
+<p> Listar todas Escuelas profesionales de Computacion de Peru y las Universidades que pertenece
+<p>
+<textarea readonly NAME="consulta2" cols=120 rows=10 style="color: red; background-color: lightyellow">
+prefix u: <http://verdata.cl/graphs/computacion#> 
+prefix e: <http://verdata.cl/graphs/escuela/> 
+    SELECT ?nombre ?universidad
+    WHERE { GRAPH <http://example/computacion> 
+    { ?esc a u:EscuelaProfesional.
+      ?esc u:nombre ?nombre.  
+      ?esc u:pertenece ?per.
+      ?per u:nombre ?universidad.
+}}
+</textarea>
+<p><a href="http://sparql.verdata.cl/verdata/sparql?query=prefix+u%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%23%3E+%0D%0Aprefix+e%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fescuela%2F%3E+%0D%0A++++SELECT+%3Fnombre+%3Funiversidad%0D%0A++++WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fexample%2Fcomputacion%3E+%0D%0A++++%7B+%3Fesc+a+u%3AEscuelaProfesional.%0D%0A++++++%3Fesc+u%3Anombre+%3Fnombre.++%0D%0A++++++%3Fesc+u%3Apertenece+%3Fper.%0D%0A++++++%3Fper+u%3Anombre+%3Funiversidad.%0D%0A%7D%7D&output=text&stylesheet=" target="_self" title="Ejecutar Consulta"> 
+<font color="white">Ejecutar Consulta</font></a>
+<p><br></p>	
+<li type="circle">	Tercera Consulta </li> 
+<p> Listar todos docentes de Computacion del Peru con su titulos obtenidos
+<p>
+<textarea readonly NAME="consulta2" cols=120 rows=10 style="color: red; background-color: lightyellow">
+prefix u: <http://verdata.cl/graphs/computacion#> 
+prefix e: <http://verdata.cl/graphs/escuela/> 
+    SELECT ?apepart ?apemat ?name ?sexo ?titulo
+    WHERE { GRAPH <http://example/computacion> 
+    { ?acad a u:Academico. 
+      ?acad u:TituloGrado ?titulo.
+      ?acad u:apellidoMaterno ?apemat .
+      ?acad u:apellidoPaterno ?apepart.
+      ?acad u:nombre ?name. 
+      ?acad u:sexo ?sexo.
+}}
+order by desc(?titulo)
+</textarea>
+<p><a href="http://sparql.verdata.cl/verdata/sparql?query=prefix+u%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%23%3E+%0D%0Aprefix+e%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fescuela%2F%3E+%0D%0A++++SELECT+%3Fapepart+%3Fapemat+%3Fname+%3Fsexo+%3Ftitulo%0D%0A++++WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fexample%2Fcomputacion%3E+%0D%0A++++%7B+%3Facad+a+u%3AAcademico.+%0D%0A++++++%3Facad+u%3ATituloGrado+%3Ftitulo.%0D%0A++++++%3Facad+u%3AapellidoMaterno+%3Fapemat+.%0D%0A++++++%3Facad+u%3AapellidoPaterno+%3Fapepart.%0D%0A++++++%3Facad+u%3Anombre+%3Fname.+%0D%0A++++++%3Facad+u%3Asexo+%3Fsexo.%0D%0A%7D%7D%0D%0Aorder+by+desc%28%3Ftitulo%29&output=text&stylesheet=" target="_self" title="Ejecutar Consulta">
+<font color="white">Ejecutar Consulta</font></a>
+<p><br></p>	
+</ul>	
+</form>
+</div>
+<div id="javas" class="et titulojava" >
+Consuma nuestros datos desde Java, aqui un ejemplo sencillo de como conectarse a nuestro data set.
+<p>
+descargue el codigo Java completo.<a href="json/EscuelaProfesional.java" target="_blank"><font color="white">Descargar</font></a>
+</div>
+<div id="java" class="et resultado" >
+</div>
+
+				</div><!--Presentacion -->
 				<div id="pie" class="quiebre">
 					<p id="copy">2014 Departamento de Computacion - Universidad de Chile</p>
 				</div>
@@ -111,8 +110,5 @@ function __doPostBack(eventTarget, eventArgument) {
 		</div><!-- todo -->
        
     </div>
-    
-</form>
- 
-</body>
+ </body>
 </html>

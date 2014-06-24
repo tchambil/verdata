@@ -1,0 +1,683 @@
+@prefix : <http://www.semanticweb.org/luispari/ontologies/2014/4/untitled-ontology-10#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://verdata.cl/graphs/computacion> .
+
+<http://verdata.cl/graphs/computacion> rdf:type owl:Ontology ;
+                                       
+                                       owl:versionIRI <http://verdata.cl/graphs/computacion/1.0.0> .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://verdata.cl/graphs/computacion#academicoActividad
+
+<http://verdata.cl/graphs/computacion#academicoActividad> rdf:type owl:ObjectProperty ;
+                                                          
+                                                          rdfs:domain <http://verdata.cl/graphs/computacion#Academico> ;
+                                                          
+                                                          rdfs:range <http://verdata.cl/graphs/computacion#Actividades> .
+
+
+
+###  http://verdata.cl/graphs/computacion#cursoCorresponde
+
+<http://verdata.cl/graphs/computacion#cursoCorresponde> rdf:type owl:ObjectProperty ;
+                                                        
+                                                        rdfs:range <http://verdata.cl/graphs/computacion#Curso> ;
+                                                        
+                                                        rdfs:domain <http://verdata.cl/graphs/computacion#InstanciaCurso> .
+
+
+
+###  http://verdata.cl/graphs/computacion#cursosDictados
+
+<http://verdata.cl/graphs/computacion#cursosDictados> rdf:type owl:ObjectProperty ;
+                                                      
+                                                      rdfs:domain <http://verdata.cl/graphs/computacion#Academico> ;
+                                                      
+                                                      rdfs:range <http://verdata.cl/graphs/computacion#InstanciaCurso> .
+
+
+
+###  http://verdata.cl/graphs/computacion#ecuelaCurso
+
+<http://verdata.cl/graphs/computacion#ecuelaCurso> rdf:type owl:ObjectProperty ;
+                                                   
+                                                   rdfs:range <http://verdata.cl/graphs/computacion#Curso> ;
+                                                   
+                                                   rdfs:domain <http://verdata.cl/graphs/computacion#EscuelaProfesional> .
+
+
+
+###  http://verdata.cl/graphs/computacion#escuelaAdmision
+
+<http://verdata.cl/graphs/computacion#escuelaAdmision> rdf:type owl:ObjectProperty ;
+                                                       
+                                                       rdfs:range <http://verdata.cl/graphs/computacion#Admision> ;
+                                                       
+                                                       rdfs:domain <http://verdata.cl/graphs/computacion#EscuelaProfesional> .
+
+
+
+###  http://verdata.cl/graphs/computacion#escuelaCarrera
+
+<http://verdata.cl/graphs/computacion#escuelaCarrera> rdf:type owl:ObjectProperty ;
+                                                      
+                                                      rdfs:range <http://verdata.cl/graphs/computacion#Carrera> ;
+                                                      
+                                                      rdfs:domain <http://verdata.cl/graphs/computacion#EscuelaProfesional> .
+
+
+
+###  http://verdata.cl/graphs/computacion#escuelaInvestigacion
+
+<http://verdata.cl/graphs/computacion#escuelaInvestigacion> rdf:type owl:ObjectProperty ;
+                                                            
+                                                            rdfs:domain <http://verdata.cl/graphs/computacion#EscuelaProfesional> ;
+                                                            
+                                                            rdfs:range <http://verdata.cl/graphs/computacion#Investigacion> .
+
+
+
+###  http://verdata.cl/graphs/computacion#escuelaPersona
+
+<http://verdata.cl/graphs/computacion#escuelaPersona> rdf:type owl:ObjectProperty ;
+                                                      
+                                                      rdfs:domain <http://verdata.cl/graphs/computacion#EscuelaProfesional> ;
+                                                      
+                                                      rdfs:range <http://verdata.cl/graphs/computacion#Persona> .
+
+
+
+###  http://verdata.cl/graphs/computacion#investigacionArea
+
+<http://verdata.cl/graphs/computacion#investigacionArea> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:range <http://verdata.cl/graphs/computacion#Area> ;
+                                                         
+                                                         rdfs:domain <http://verdata.cl/graphs/computacion#Investigacion> .
+
+
+
+###  http://verdata.cl/graphs/computacion#investigadorArea
+
+<http://verdata.cl/graphs/computacion#investigadorArea> rdf:type owl:ObjectProperty ;
+                                                        
+                                                        rdfs:domain <http://verdata.cl/graphs/computacion#Academico> ;
+                                                        
+                                                        rdfs:range <http://verdata.cl/graphs/computacion#Area> .
+
+
+
+###  http://verdata.cl/graphs/computacion#pertenece
+
+<http://verdata.cl/graphs/computacion#pertenece> rdf:type owl:ObjectProperty ;
+                                                 
+                                                 rdfs:domain <http://verdata.cl/graphs/computacion#EscuelaProfesional> ;
+                                                 
+                                                 rdfs:range <http://verdata.cl/graphs/computacion#Universidad> .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://verdata.cl/graphs/computacion#acronimo
+
+<http://verdata.cl/graphs/computacion#acronimo> rdf:type owl:DatatypeProperty ;
+                                                
+                                                rdfs:domain <http://verdata.cl/graphs/computacion#Universidad> ;
+                                                
+                                                rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#actividadProfesional
+
+<http://verdata.cl/graphs/computacion#actividadProfesional> rdf:type owl:DatatypeProperty ;
+                                                            
+                                                            rdfs:domain <http://verdata.cl/graphs/computacion#AcademicoJornadaParcial> ;
+                                                            
+                                                            rdfs:range xsd:string .
+
+
+
+###  http://verdata.cl/graphs/computacion#apellidoMaterno
+
+<http://verdata.cl/graphs/computacion#apellidoMaterno> rdf:type owl:DatatypeProperty ;
+                                                       
+                                                       rdfs:domain <http://verdata.cl/graphs/computacion#Persona> ;
+                                                       
+                                                       rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#apellidoPaterno
+
+<http://verdata.cl/graphs/computacion#apellidoPaterno> rdf:type owl:DatatypeProperty ;
+                                                       
+                                                       rdfs:domain <http://verdata.cl/graphs/computacion#Persona> ;
+                                                       
+                                                       rdfs:range xsd:string .
+
+
+
+###  http://verdata.cl/graphs/computacion#areas
+
+<http://verdata.cl/graphs/computacion#areas> rdf:type owl:DatatypeProperty ;
+                                             
+                                             rdfs:domain <http://verdata.cl/graphs/computacion#Investigacion> ;
+                                             
+                                             rdfs:range xsd:string .
+
+
+
+###  http://verdata.cl/graphs/computacion#eAdmision
+
+<http://verdata.cl/graphs/computacion#eAdmision> rdf:type owl:DatatypeProperty ;
+                                                 
+                                                 rdfs:comment "Enlace a Admision"@es ;
+                                                 
+                                                 rdfs:domain <http://verdata.cl/graphs/computacion#Admision> ;
+                                                 
+                                                 rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#eBecasBen
+
+<http://verdata.cl/graphs/computacion#eBecasBen> rdf:type owl:DatatypeProperty ;
+                                                 
+                                                 rdfs:comment "Enlace a becas y benficios"@es ;
+                                                 
+                                                 rdfs:domain <http://verdata.cl/graphs/computacion#Admision> ;
+                                                 
+                                                 rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#eCurriculum
+
+<http://verdata.cl/graphs/computacion#eCurriculum> rdf:type owl:DatatypeProperty ;
+                                                   
+                                                   rdfs:domain <http://verdata.cl/graphs/computacion#Academico> ;
+                                                   
+                                                   rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#eCurso
+
+<http://verdata.cl/graphs/computacion#eCurso> rdf:type owl:DatatypeProperty ;
+                                              
+                                              rdfs:comment "Enlace a pagina del curso"@es ;
+                                              
+                                              rdfs:domain <http://verdata.cl/graphs/computacion#Curso> ;
+                                              
+                                              rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#eFecha
+
+<http://verdata.cl/graphs/computacion#eFecha> rdf:type owl:DatatypeProperty ;
+                                              
+                                              rdfs:comment "Enlace fechas importantes"@es ;
+                                              
+                                              rdfs:domain <http://verdata.cl/graphs/computacion#Admision> ;
+                                              
+                                              rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#eInstCurso
+
+<http://verdata.cl/graphs/computacion#eInstCurso> rdf:type owl:DatatypeProperty ;
+                                                  
+                                                  rdfs:comment "enlace a instancia de Curso"@es ;
+                                                  
+                                                  rdfs:domain <http://verdata.cl/graphs/computacion#InstanciaCurso> ;
+                                                  
+                                                  rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#eLaboCentros
+
+<http://verdata.cl/graphs/computacion#eLaboCentros> rdf:type owl:DatatypeProperty ;
+                                                    
+                                                    rdfs:comment """Enlace a Laboratorios y Centros
+"""@es ;
+                                                    
+                                                    rdfs:domain <http://verdata.cl/graphs/computacion#Investigacion> ;
+                                                    
+                                                    rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#eMalla
+
+<http://verdata.cl/graphs/computacion#eMalla> rdf:type owl:DatatypeProperty ;
+                                              
+                                              rdfs:comment "Enlace a mallla "@es .
+
+
+
+###  http://verdata.cl/graphs/computacion#eMatricula
+
+<http://verdata.cl/graphs/computacion#eMatricula> rdf:type owl:DatatypeProperty ;
+                                                  
+                                                  rdfs:comment "Enlace a matricula y arancel"@es ;
+                                                  
+                                                  rdfs:domain <http://verdata.cl/graphs/computacion#Admision> ;
+                                                  
+                                                  rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#eObjetivos
+
+<http://verdata.cl/graphs/computacion#eObjetivos> rdf:type owl:DatatypeProperty ;
+                                                  
+                                                  rdfs:comment "URL a Objetivos"@es ;
+                                                  
+                                                  rdfs:domain <http://verdata.cl/graphs/computacion#Carrera> ;
+                                                  
+                                                  rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#ePlan
+
+<http://verdata.cl/graphs/computacion#ePlan> rdf:type owl:DatatypeProperty ;
+                                             
+                                             rdfs:comment """URL a Plan
+"""@es ;
+                                             
+                                             rdfs:domain <http://verdata.cl/graphs/computacion#Carrera> ;
+                                             
+                                             rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#ePlanEstudio
+
+<http://verdata.cl/graphs/computacion#ePlanEstudio> rdf:type owl:DatatypeProperty ;
+                                                    
+                                                    rdfs:comment """Enlace a plan de estudios
+"""@es ;
+                                                    
+                                                    rdfs:domain <http://verdata.cl/graphs/computacion#Admision> ;
+                                                    
+                                                    rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#eProyecto
+
+<http://verdata.cl/graphs/computacion#eProyecto> rdf:type owl:DatatypeProperty ;
+                                                 
+                                                 rdfs:comment "Enlace a Proyectos"@es ;
+                                                 
+                                                 rdfs:domain <http://verdata.cl/graphs/computacion#Academico> ,
+                                                             <http://verdata.cl/graphs/computacion#Investigacion> ;
+                                                 
+                                                 rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#ePublicacion
+
+<http://verdata.cl/graphs/computacion#ePublicacion> rdf:type owl:DatatypeProperty ;
+                                                    
+                                                    rdfs:comment "Enlace a publicaciones"@es ;
+                                                    
+                                                    rdfs:domain <http://verdata.cl/graphs/computacion#Academico> ,
+                                                                <http://verdata.cl/graphs/computacion#Investigacion> ;
+                                                    
+                                                    rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#eReporte
+
+<http://verdata.cl/graphs/computacion#eReporte> rdf:type owl:DatatypeProperty ;
+                                                
+                                                rdfs:comment "Enlace a reportes tecnicos"@es ;
+                                                
+                                                rdfs:domain <http://verdata.cl/graphs/computacion#Investigacion> ;
+                                                
+                                                rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#eRequisitos
+
+<http://verdata.cl/graphs/computacion#eRequisitos> rdf:type owl:DatatypeProperty ;
+                                                   
+                                                   rdfs:comment "URL a requisitos"@es ;
+                                                   
+                                                   rdfs:domain <http://verdata.cl/graphs/computacion#Carrera> ;
+                                                   
+                                                   rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#eResena
+
+<http://verdata.cl/graphs/computacion#eResena> rdf:type owl:DatatypeProperty ;
+                                               
+                                               rdfs:comment "Enlace a reseña de la universidad"@es ;
+                                               
+                                               rdfs:domain <http://verdata.cl/graphs/computacion#EscuelaProfesional> ;
+                                               
+                                               rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#eTemaMemoria
+
+<http://verdata.cl/graphs/computacion#eTemaMemoria> rdf:type owl:DatatypeProperty ;
+                                                    
+                                                    rdfs:comment "Enlace a temas de memoria "@es ;
+                                                    
+                                                    rdfs:domain <http://verdata.cl/graphs/computacion#Academico> ;
+                                                    
+                                                    rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#eUniversidad
+
+<http://verdata.cl/graphs/computacion#eUniversidad> rdf:type owl:DatatypeProperty ;
+                                                    
+                                                    rdfs:comment "Pagina web de la universidad"@es ;
+                                                    
+                                                    rdfs:domain <http://verdata.cl/graphs/computacion#Universidad> ;
+                                                    
+                                                    rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#facultad
+
+<http://verdata.cl/graphs/computacion#facultad> rdf:type owl:DatatypeProperty ;
+                                                
+                                                rdfs:domain <http://verdata.cl/graphs/computacion#EscuelaProfesional> ;
+                                                
+                                                rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#fechaNacimiento
+
+<http://verdata.cl/graphs/computacion#fechaNacimiento> rdf:type owl:DatatypeProperty ;
+                                                       
+                                                       rdfs:domain <http://verdata.cl/graphs/computacion#Persona> ;
+                                                       
+                                                       rdfs:range xsd:dateTime .
+
+
+
+###  http://verdata.cl/graphs/computacion#fundacion
+
+<http://verdata.cl/graphs/computacion#fundacion> rdf:type owl:DatatypeProperty ;
+                                                 
+                                                 rdfs:domain <http://verdata.cl/graphs/computacion#Universidad> ;
+                                                 
+                                                 rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#jerarquia
+
+<http://verdata.cl/graphs/computacion#jerarquia> rdf:type owl:DatatypeProperty ;
+                                                 
+                                                 rdfs:domain <http://verdata.cl/graphs/computacion#AcedemicoJornadaCompleta> ;
+                                                 
+                                                 rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#nombre
+
+<http://verdata.cl/graphs/computacion#nombre> rdf:type owl:DatatypeProperty ;
+                                              
+                                              rdfs:domain <http://verdata.cl/graphs/computacion#Actividades> ,
+                                                          <http://verdata.cl/graphs/computacion#Area> ,
+                                                          <http://verdata.cl/graphs/computacion#Carrera> ,
+                                                          <http://verdata.cl/graphs/computacion#Curso> ,
+                                                          <http://verdata.cl/graphs/computacion#EscuelaProfesional> ,
+                                                          <http://verdata.cl/graphs/computacion#Persona> ,
+                                                          <http://verdata.cl/graphs/computacion#Universidad> ;
+                                              
+                                              rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#sede
+
+<http://verdata.cl/graphs/computacion#sede> rdf:type owl:DatatypeProperty ;
+                                            
+                                            rdfs:domain <http://verdata.cl/graphs/computacion#Universidad> ;
+                                            
+                                            rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#sexo
+
+<http://verdata.cl/graphs/computacion#sexo> rdf:type owl:DatatypeProperty ;
+                                            
+                                            rdfs:domain <http://verdata.cl/graphs/computacion#Persona> ;
+                                            
+                                            rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#tipoU
+
+<http://verdata.cl/graphs/computacion#tipoU> rdf:type owl:DatatypeProperty ;
+                                             
+                                             rdfs:domain <http://verdata.cl/graphs/computacion#Universidad> ;
+                                             
+                                             rdfs:range rdfs:Literal .
+
+
+
+###  http://verdata.cl/graphs/computacion#tituloGrado
+
+<http://verdata.cl/graphs/computacion#tituloGrado> rdf:type owl:DatatypeProperty ;
+                                                   
+                                                   rdfs:domain <http://verdata.cl/graphs/computacion#Academico> ;
+                                                   
+                                                   rdfs:range rdfs:Literal .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://verdata.cl/graphs/computacion#Academico
+
+<http://verdata.cl/graphs/computacion#Academico> rdf:type owl:Class ;
+                                                 
+                                                 rdfs:subClassOf <http://verdata.cl/graphs/computacion#Persona> .
+
+
+
+###  http://verdata.cl/graphs/computacion#AcademicoJornadaParcial
+
+<http://verdata.cl/graphs/computacion#AcademicoJornadaParcial> rdf:type owl:Class ;
+                                                               
+                                                               rdfs:subClassOf <http://verdata.cl/graphs/computacion#Academico> .
+
+
+
+###  http://verdata.cl/graphs/computacion#AcademicoVisitante
+
+<http://verdata.cl/graphs/computacion#AcademicoVisitante> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:subClassOf <http://verdata.cl/graphs/computacion#Academico> .
+
+
+
+###  http://verdata.cl/graphs/computacion#AcedemicoJornadaCompleta
+
+<http://verdata.cl/graphs/computacion#AcedemicoJornadaCompleta> rdf:type owl:Class ;
+                                                                
+                                                                rdfs:subClassOf <http://verdata.cl/graphs/computacion#Academico> .
+
+
+
+###  http://verdata.cl/graphs/computacion#Actividades
+
+<http://verdata.cl/graphs/computacion#Actividades> rdf:type owl:Class ;
+                                                   
+                                                   owl:disjointWith <http://verdata.cl/graphs/computacion#Admision> ,
+                                                                    <http://verdata.cl/graphs/computacion#Area> ,
+                                                                    <http://verdata.cl/graphs/computacion#Carrera> ,
+                                                                    <http://verdata.cl/graphs/computacion#Curso> ,
+                                                                    <http://verdata.cl/graphs/computacion#EscuelaProfesional> ,
+                                                                    <http://verdata.cl/graphs/computacion#InstanciaCurso> ,
+                                                                    <http://verdata.cl/graphs/computacion#Investigacion> ,
+                                                                    <http://verdata.cl/graphs/computacion#Persona> ,
+                                                                    <http://verdata.cl/graphs/computacion#Universidad> .
+
+
+
+###  http://verdata.cl/graphs/computacion#Admision
+
+<http://verdata.cl/graphs/computacion#Admision> rdf:type owl:Class ;
+                                                
+                                                owl:disjointWith <http://verdata.cl/graphs/computacion#Area> ,
+                                                                 <http://verdata.cl/graphs/computacion#Carrera> ,
+                                                                 <http://verdata.cl/graphs/computacion#Curso> ,
+                                                                 <http://verdata.cl/graphs/computacion#EscuelaProfesional> ,
+                                                                 <http://verdata.cl/graphs/computacion#InstanciaCurso> ,
+                                                                 <http://verdata.cl/graphs/computacion#Investigacion> ,
+                                                                 <http://verdata.cl/graphs/computacion#Persona> ,
+                                                                 <http://verdata.cl/graphs/computacion#Universidad> .
+
+
+
+###  http://verdata.cl/graphs/computacion#Alumno
+
+<http://verdata.cl/graphs/computacion#Alumno> rdf:type owl:Class ;
+                                              
+                                              rdfs:subClassOf <http://verdata.cl/graphs/computacion#Persona> .
+
+
+
+###  http://verdata.cl/graphs/computacion#Area
+
+<http://verdata.cl/graphs/computacion#Area> rdf:type owl:Class ;
+                                            
+                                            owl:disjointWith <http://verdata.cl/graphs/computacion#Carrera> ,
+                                                             <http://verdata.cl/graphs/computacion#Curso> ,
+                                                             <http://verdata.cl/graphs/computacion#EscuelaProfesional> ,
+                                                             <http://verdata.cl/graphs/computacion#InstanciaCurso> ,
+                                                             <http://verdata.cl/graphs/computacion#Investigacion> ,
+                                                             <http://verdata.cl/graphs/computacion#Persona> ,
+                                                             <http://verdata.cl/graphs/computacion#Universidad> .
+
+
+
+###  http://verdata.cl/graphs/computacion#Carrera
+
+<http://verdata.cl/graphs/computacion#Carrera> rdf:type owl:Class ;
+                                               
+                                               owl:disjointWith <http://verdata.cl/graphs/computacion#Curso> ,
+                                                                <http://verdata.cl/graphs/computacion#EscuelaProfesional> ,
+                                                                <http://verdata.cl/graphs/computacion#InstanciaCurso> ,
+                                                                <http://verdata.cl/graphs/computacion#Investigacion> ,
+                                                                <http://verdata.cl/graphs/computacion#Persona> ,
+                                                                <http://verdata.cl/graphs/computacion#Universidad> .
+
+
+
+###  http://verdata.cl/graphs/computacion#Curso
+
+<http://verdata.cl/graphs/computacion#Curso> rdf:type owl:Class ;
+                                             
+                                             owl:disjointWith <http://verdata.cl/graphs/computacion#EscuelaProfesional> ,
+                                                              <http://verdata.cl/graphs/computacion#InstanciaCurso> ,
+                                                              <http://verdata.cl/graphs/computacion#Investigacion> ,
+                                                              <http://verdata.cl/graphs/computacion#Persona> ,
+                                                              <http://verdata.cl/graphs/computacion#Universidad> .
+
+
+
+###  http://verdata.cl/graphs/computacion#EscuelaProfesional
+
+<http://verdata.cl/graphs/computacion#EscuelaProfesional> rdf:type owl:Class ;
+                                                          
+                                                          owl:disjointWith <http://verdata.cl/graphs/computacion#InstanciaCurso> ,
+                                                                           <http://verdata.cl/graphs/computacion#Investigacion> ,
+                                                                           <http://verdata.cl/graphs/computacion#Persona> ,
+                                                                           <http://verdata.cl/graphs/computacion#Universidad> .
+
+
+
+###  http://verdata.cl/graphs/computacion#Funcionario
+
+<http://verdata.cl/graphs/computacion#Funcionario> rdf:type owl:Class ;
+                                                   
+                                                   rdfs:subClassOf <http://verdata.cl/graphs/computacion#Persona> .
+
+
+
+###  http://verdata.cl/graphs/computacion#InstanciaCurso
+
+<http://verdata.cl/graphs/computacion#InstanciaCurso> rdf:type owl:Class ;
+                                                      
+                                                      owl:disjointWith <http://verdata.cl/graphs/computacion#Investigacion> ,
+                                                                       <http://verdata.cl/graphs/computacion#Persona> ,
+                                                                       <http://verdata.cl/graphs/computacion#Universidad> .
+
+
+
+###  http://verdata.cl/graphs/computacion#Investigacion
+
+<http://verdata.cl/graphs/computacion#Investigacion> rdf:type owl:Class ;
+                                                     
+                                                     owl:disjointWith <http://verdata.cl/graphs/computacion#Persona> .
+
+
+
+###  http://verdata.cl/graphs/computacion#Persona
+
+<http://verdata.cl/graphs/computacion#Persona> rdf:type owl:Class .
+
+
+
+###  http://verdata.cl/graphs/computacion#Universidad
+
+<http://verdata.cl/graphs/computacion#Universidad> rdf:type owl:Class .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
