@@ -15,8 +15,9 @@
 	<link rel="stylesheet" href="style/general.css" />
 	  <script src="json/jquery-2.0.3.min.js"></script>
 	  <script src="json/verdata.js"></script>
-	<script src="json/scripts.js"  charset="utf-8"></script>
+	<script src="json/escuelas.js"  charset="utf-8"></script>
 	<script src="json/suniversidad.js"></script>
+	<script src="json/uniprivatpublic.js"></script>
 	<script>
 	    function sobre(obj) {
 	        var classes = obj.className.split(/\s+/);
@@ -47,7 +48,7 @@
             div.style.display = 'none';
         }
     </script>
-   
+
     
     </head>
 <body class="fondoAzul">
@@ -71,6 +72,14 @@ function __doPostBack(eventTarget, eventArgument) {
 }
 //]]>
 </script>
+<script language="JavaScript">
+function Abrir_ventana (lugar) {
+	var enlace0="http://sparql.verdata.cl/verdata/sparql?query=+prefix+u%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%23%3E+%0D%0A+SELECT+%3Funiversidad+%3Furl+%3Fnombre+%0D%0A++++WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fexample%2Fcomputacion%3E+%0D%0A++++%7B+%3Fesc+a+u%3AEscuelaProfesional.%0D%0A++++++%3Fesc+u%3Anombre+%3Fnombre.++%0D%0A++++++%3Fesc+u%3Apertenece+%3Fper.%0D%0A++++++%3Fper+u%3Anombre+%3Funiversidad.%0D%0A++++++%3Fper+u%3AeUniversidad+%3Furl.%0D%0A++++++%3Fper+u%3Asede+%3Fsede.+%0D%0A+++FILTER%28regex%28%3Fsede%2C+%27"+lugar+"%27%29%29.+%7D%7D+&output=text&stylesheet="; 
+	var enlace="http://sparql.verdata.cl/verdata/sparql?query=+prefix+u%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%23%3E+%0D%0A+SELECT+%3Funiversidad+%3Fnombre+%3Furl+%0D%0A++++WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fexample%2Fcomputacion%3E+%0D%0A++++%7B+%3Fesc+a+u%3AEscuelaProfesional.%0D%0A++++++%3Fesc+u%3Anombre+%3Fnombre.++%0D%0A++++++%3Fesc+u%3Apertenece+%3Fper.%0D%0A++++++%3Fper+u%3Anombre+%3Funiversidad.%0D%0A++++++%3Fesc+u%3AeResena+%3Furl.%0D%0A++++++%3Fper+u%3Asede+%3Fsede.+%0D%0A+++FILTER%28regex%28%3Fsede%2C+%27"+lugar+"%27%29%29.+%7D%7D+&output=text&stylesheet="
+
+window.open(enlace0,"Universidades y Escuelas Profesionales","toolbar=0,location=0,width=1008, height=465, top=85, left=140");
+}
+</script>
 
 <div>
  <div id="todo">
@@ -92,117 +101,117 @@ function __doPostBack(eventTarget, eventArgument) {
 				<nav id="mapa">
 					<ul>
 						<li>
-							<a class="pt ptCajamarca" href="#"><span class="invisible">Cajamarca</span></a>
+							<a class="pt ptCajamarca" href="javascript:Abrir_ventana('Cajamarca')"><span class="invisible">Cajamarca</span></a>
 							<a class="et etCajamarca" href="#">Cajamarca</a>
 						</li>
 						<li>
-							<a class="pt ptAmazonas" href="#"><span class="invisible">Amazonas</span></a>
+							<a class="pt ptAmazonas" href="javascript:Abrir_ventana('Amazonas')"><span class="invisible">Amazonas</span></a>
 							<a class="et etAmazonas" href="#">Amazonas</a>
 						</li>
 
 						<li>
-							<a class="pt ptUcayali" href="#"><span class="invisible">Ucayali</span></a>
+							<a class="pt ptUcayali" href="javascript:Abrir_ventana('Ucayali')"><span class="invisible">Ucayali</span></a>
 							<a class="et etUcayali" href="#" >Ucayali</a>
 						</li>
 
 							<li>
-							<a class="pt ptTumbes" href="#"><span class="invisible">TUMBES</span></a>
+							<a class="pt ptTumbes" href="javascript:Abrir_ventana('Tumbes')"><span class="invisible">TUMBES</span></a>
 							<a class="et etTumbes" href="#">TUMBES</a>
 						</li>
 						<li>
-							<a class="pt ptLambayeque" href="#"><span class="invisible">Lambayeque</span></a>
+							<a class="pt ptLambayeque" href="javascript:Abrir_ventana('Lambayeque')"><span class="invisible">Lambayeque</span></a>
 							<a class="et etLambayeque" href="#">Lambayeque</a>
 						</li>
 						
 						<li>
-							<a class="pt ptHuanuco" href="#"><span class="invisible">Huanuco</span></a>
+							<a class="pt ptHuanuco" href="javascript:Abrir_ventana('Huanuco')"><span class="invisible">Huanuco</span></a>
 							<a class="et etHuanuco" href="#">Huanuco</a>
 						</li>
 						<li>
-							<a class="pt ptPasco" href="#"><span class="invisible">Cerro de Pasco</span></a>
+							<a class="pt ptPasco" href="javascript:Abrir_ventana('Cerro de Pasco')"><span class="invisible">Cerro de Pasco</span></a>
 							<a class="et etPasco" href="#">Cerro de Pasco</a>
 						</li>
 						 
 						<li>
-							<a class="pt ptAncash" href="#"><span class="invisible">ANCASH</span></a>
+							<a class="pt ptAncash" href="javascript:Abrir_ventana('Ancash')"><span class="invisible">ANCASH</span></a>
 							<a class="et etAncash" href="#">ANCASH</a>
 						</li>
 
 						<li>
-						    <a class="pt ptCallao" href="#"><span class="invisible">CALLAO</span></a>
+						    <a class="pt ptCallao" href="javascript:Abrir_ventana('Callao')"><span class="invisible">CALLAO</span></a>
 							<a class="et etCallao" href="#">CALLAO</a>
 						</li>
 
 						<li>
-							<a id="lima" class="pt ptLima" href="#"><span class="invisible">LIMA</span></a>
-							<a class="et etLima" href="#">LIMA</a>
+							<a id="lima" class="pt ptLima" href="javascript:Abrir_ventana('Lima')"><span class="invisible">LIMA</span></a>
+							<a class="et etLima" href="">LIMA</a>
 						</li>
 						<li>
-							<a class="pt ptIquitos" href="#"><span class="invisible">IQUITOS</span></a>
+							<a class="pt ptIquitos" href="javascript:Abrir_ventana('Iquitos')"><span class="invisible">IQUITOS</span></a>
 							<a class="et etIquitos" href="#">IQUITOS</a>
 						</li>
 						<li>
-							<a class="pt ptPiura" href="#"><span class="invisible">PIURA</span></a>
+							<a class="pt ptPiura" href="javascript:Abrir_ventana('Piura')"><span class="invisible">PIURA</span></a>
 							<a class="et etPiura" href="#">PIURA</a>
 						</li>
 						<li>
-							<a class="pt ptSan_Martin" href="#"><span class="invisible">San Martin</span></a>
+							<a class="pt ptSan_Martin" href="javascript:Abrir_ventana('San Martin')"><span class="invisible">San Martin</span></a>
 							<a class="et etSan_Martin" href="#">San Martin</a>
 						</li>
 						<li> 
-							<a class="pt ptLa_Libertad" href="#"><span class="invisible">LA_LIBERTAD</span></a>
+							<a class="pt ptLa_Libertad" href="javascript:Abrir_ventana('La Libertad')"><span class="invisible">LA_LIBERTAD</span></a>
 							<a class="et etLa_Libertad" href="#">LA LIBERTAD</a>
 						</li>
 
 						<li>
-							<a class="pt ptJunin" href="#"><span class="invisible">Junin</span></a>
+							<a class="pt ptJunin" href="javascript:Abrir_ventana('Junin')"><span class="invisible">Junin</span></a>
 							<a class="et etJunin" href="#">Junin</a>
 						</li>
 
 						<li>
-							<a class="pt ptHuancavelica" href="#"><span class="invisible">Huancavelica</span></a>
+							<a class="pt ptHuancavelica" href="javascript:Abrir_ventana('Huancavelica')"><span class="invisible">Huancavelica</span></a>
 							<a class="et etHuancavelica" href="#">Huancavelica</a>
 						</li>
 
 						<li>
-							<a class="pt ptIca" href="#"><span class="invisible">ICA</span></a>
+							<a class="pt ptIca" href="javascript:Abrir_ventana('Ica')"><span class="invisible">ICA</span></a>
 							<a class="et etIca" href="#">ICA</a>
 						</li>
 
 						<li>
-							<a class="pt ptAyacucho" href="#"><span class="invisible">Ayacucho</span></a>
+							<a class="pt ptAyacucho" href="javascript:Abrir_ventana('Ayacucho')"><span class="invisible">Ayacucho</span></a>
 							<a class="et etAyacucho" href="#">Ayacucho</a>
 						</li>
 						<li>
-							<a class="pt ptApurimac" href="#"><span class="invisible">Apurimac</span></a>
+							<a class="pt ptApurimac" href="javascript:Abrir_ventana('Apurimac')"><span class="invisible">Apurimac</span></a>
 							<a class="et etApurimac" href="#">Apurimac</a>
 						</li>
 						<li>
-							<a class="pt ptCuzco" href="#"><span class="invisible">CUZCO</span></a>
+							<a class="pt ptCuzco" href="javascript:Abrir_ventana('Cuzco')"><span class="invisible">CUZCO</span></a>
 							<a class="et etCuzco" href="#">CUZCO</a>
 						</li>
 
 						<li>
-							<a class="pt ptMadre_de_Dios" href="#"><span class="invisible">Madre de Dios</span></a>
+							<a class="pt ptMadre_de_Dios" href="javascript:Abrir_ventana('Madre de Dios')"><span class="invisible">Madre de Dios</span></a>
 							<a class="et etMadre_de_Dios" href="#">Madre de Dios</a>
 						</li>
 
 						<li>
-							<a class="pt ptPuno" href="#"><span class="invisible">PUNO</span></a>
+							<a class="pt ptPuno" href="javascript:Abrir_ventana('Puno')"><span class="invisible">PUNO</span></a>
 							<a class="et etPuno" href="#">PUNO</a>
 						</li>
 
 						<li>
-							<a class="pt ptArequipa" href="#"><span class="invisible">AREQUIPA</span></a>
+							<a class="pt ptArequipa" href="javascript:Abrir_ventana('Arequipa')"><span class="invisible">AREQUIPA</span></a>
 							<a class="et etArequipa" href="#">AREQUIPA</a>
 						</li>
 						<li>
-							<a class="pt ptMoquegua" href="#"><span class="invisible">MOQUEGUA</span></a>
+							<a class="pt ptMoquegua" href="javascript:Abrir_ventana('Moquegua')"><span class="invisible">MOQUEGUA</span></a>
 							<a class="et etMoquegua" href="#">MOQUEGUA</a>
 						</li>
 
 						<li>
-							<a class="pt ptTacna" href="#"><span class="invisible">TACNA</span></a>
+							<a class="pt ptTacna" href="javascript:Abrir_ventana('Tacna')"><span class="invisible">TACNA</span></a>
 							<a class="et etTacna" href="#">TACNA</a>
 						</li>
 					</ul>
@@ -218,15 +227,23 @@ function __doPostBack(eventTarget, eventArgument) {
 				</div>
 
 				</div>
-				
+					<div id="private" class="et uprivate">
+						<div id="privatepublic">
+						 	
+						</div>
+					
+				</div>
+					<div id="TitleUniversidad" class ="et TitlecUniversidad">
+						Cantidad/Universidad
+					</div>
 				<div id="charts" class="et chart">
 						<div id="graficos">
-							Resumen		
+						 
 						</div>
 				</div>
 				<div id="titlecharst" class ="et titlechart">
 					<div>
-						Cantidad de Data
+						Cantidad/Ciudad
 					</div>
 				</div>
 				<div id="presentacion" font size="6">
@@ -239,7 +256,7 @@ function __doPostBack(eventTarget, eventArgument) {
 					 	</li>
 				 	</ul>
 					<nav id="campus">
-						<p id="elige">Elige tu Universidad</p>
+						<p id="elige">Elige tu Carrera</p>
 						<nav id="listaUniv">
 						</nav>
 					</nav>

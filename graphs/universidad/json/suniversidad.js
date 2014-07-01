@@ -20,7 +20,7 @@ sparql(
 google.setOnLoadCallback(draChart);
 function draChart(data) 
 	{   
-      var options = {'width':400,'height':400 ,'backgroundColor':'transparent',legend: {position: 'left', textStyle: {color: 'white', fontSize: 10}}};
+      var options = {'width':280,'height':280 ,'backgroundColor':'transparent',legend: {position: 'none', textStyle: {color: 'white', fontSize: 10}}};
      var chart = new google.visualization.PieChart(document.getElementById('graficos'));
      // var table = new google.visualization.Table(document.getElementById('grafic1'));
      // var bar = new google.visualization.BarChart(document.getElementById('graficos'));
