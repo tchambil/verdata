@@ -1,7 +1,4 @@
- 
-//var lugar='Lima';
 
- 
 function sparql(query, fun) {
 	$.ajax({
 	url: "http://sparql.verdata.cl/verdata/query",

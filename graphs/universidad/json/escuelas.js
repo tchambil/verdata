@@ -5,7 +5,7 @@ sparql(
     "prefix u: <http://verdata.cl/graphs/computacion#> "+
     "prefix e: <http://verdata.cl/graphs/escuela/> "+
     "SELECT distinct ?nombre ?url "+
-    "WHERE { GRAPH <http://example/computacion> "+
+    "WHERE { GRAPH <http://verdata.cl/graphs/computacion/> "+
     "{ ?esc a u:EscuelaProfesional. "+
     "  ?esc u:nombre ?nombre. "+
     "?esc u:eResena ?url.}} "+

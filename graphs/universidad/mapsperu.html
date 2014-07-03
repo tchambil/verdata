@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+   <script>
+    google.load('visualization', '1', { 'packages': ['map'] });
+    google.setOnLoadCallback(drawMap);
+
+    function drawMap() {
+      var data = google.visualization.arrayToDataTable
+      ([
+        ['Lat', 'Long', 'Name'],
+        [-18.055,-70.248, 'Tacna'],
+        [-12.035,-77.018, 'Lima'],
+        [-13.160,-74.225, 'Ayacucho'],
+        [-13.518,-71.978, 'Cuzco'],
+        [-8.000,-78.500,'La Libertad'],
+        [-16.398,-71.536, 'Arequipa'],
+        [-15.843,-70.023, 'Puno'],
+        [-14.066,-75.733, 'Ica'],
+        [-11.48,-74.98,  'Junin'],
+        [-10.5,-75.3,'Pasco'],
+        [-8.363,-76.315,'Huanuco'],
+        [-3.733,-73.25,'Iquitos'],
+        [-5.2,-80.625,'Piura'],
+        [-7.164,-78.51,'Cajamarca'],
+        [-12.033,-77.133,'Callao'],
+        [-6.433,-79.866,'Lambayeque'],
+        [-18.055,-70.248,'Tacna'],
+        [-9.53,-77.53,'Ancash'],
+        [-9.96,-73.19,'Ucayali'],
+        [-7.2,-76.8,'San_Martin'],
+        [-3.56,-80.4,'Tumbes'],
+        [-12.785,-74.971,'Huancavelica'],
+        [-12.6,-69.183,'Madre_de_Dios'],
+        [-13.63,-72.88,'Apurimac'],
+        [-6.22,-77.85,'Amazonas'],
+        [-16.8,-70.8,'Moquegua'] 
+
+      ]);
+    
+
+    var options = { showTip: true ,mapType: 'normal', 
+
+  //  icons: {
+   //   default: {
+    //   normal: 'https://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png',
+    //   selected: 'https://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png',
+    //   normal:'https://maps.gstatic.com/mapfiles/ms2/micons/red.png'
+    // }}
+  };
+
+    var map = new google.visualization.Map(document.getElementById('chart_div'));
+
+    map.draw(data, options);
+  };
+  </script>
+  </head>
+
+  <body>
+    <div id="chart_div" style="width: 400px; height: 300px"></div>
+  </body>
+</html>

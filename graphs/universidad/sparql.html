@@ -43,14 +43,14 @@
 <textarea readonly NAME="consulta1" cols=120 rows=10   style="color: red; background-color: lightyellow">
  prefix r: <http://verdata.cl/graphs/computacion#> 
     SELECT ?sede  (count(?sede) as ?cant) 
-    WHERE   {graph <http://example/computacion> 
+    WHERE   {graph <http://verdata.cl/graphs/computacion/> 
      { ?uni a  r:Universidad. 
     ?uni r:sede ?sede.
     ?uni r:nombre ?nombre.} } 
     group by ?sede 
     order by asc(?sede)
 </textarea>
-<p><a href="http://sparql.verdata.cl/verdata/sparql?query=prefix+r%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%23%3E+%0D%0A++++SELECT+%3Fsede++%28count%28%3Fsede%29+as+%3Fcant%29+%0D%0A++++WHERE+++%7Bgraph+%3Chttp%3A%2F%2Fexample%2Fcomputacion%3E+%0D%0A+++++%7B+%3Funi+a++r%3AUniversidad.+%0D%0A++++%3Funi+r%3Asede+%3Fsede.%0D%0A++++%3Funi+r%3Anombre+%3Fnombre.%7D+%7D+%0D%0A++++group+by+%3Fsede+%0D%0A++++order+by+asc%28%3Fsede%29&output=text&stylesheet=" target="_self" title="Ejecutar Consulta">
+<p><a href="http://sparql.verdata.cl/verdata/sparql?query=+prefix+r%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%23%3E+%0D%0A++++SELECT+%3Fsede++%28count%28%3Fsede%29+as+%3Fcant%29+%0D%0A++++WHERE+++%7Bgraph+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%2F%3E+%0D%0A+++++%7B+%3Funi+a++r%3AUniversidad.+%0D%0A++++%3Funi+r%3Asede+%3Fsede.%0D%0A++++%3Funi+r%3Anombre+%3Fnombre.%7D+%7D+%0D%0A++++group+by+%3Fsede+%0D%0A++++order+by+asc%28%3Fsede%29&output=text&stylesheet=" target="_self" title="Ejecutar Consulta">
 <font color="white">Ejecutar Consulta</font></a>
 <p><br></p>	
  <li type="circle">	Segunda Consulta </li> 
@@ -61,14 +61,14 @@
 prefix u: <http://verdata.cl/graphs/computacion#> 
 prefix e: <http://verdata.cl/graphs/escuela/> 
     SELECT ?nombre ?universidad
-    WHERE { GRAPH <http://example/computacion> 
+    WHERE { GRAPH <http://verdata.cl/graphs/computacion/> 
     { ?esc a u:EscuelaProfesional.
       ?esc u:nombre ?nombre.  
       ?esc u:pertenece ?per.
       ?per u:nombre ?universidad.
 }}
 </textarea>
-<p><a href="http://sparql.verdata.cl/verdata/sparql?query=prefix+u%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%23%3E+%0D%0Aprefix+e%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fescuela%2F%3E+%0D%0A++++SELECT+%3Fnombre+%3Funiversidad%0D%0A++++WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fexample%2Fcomputacion%3E+%0D%0A++++%7B+%3Fesc+a+u%3AEscuelaProfesional.%0D%0A++++++%3Fesc+u%3Anombre+%3Fnombre.++%0D%0A++++++%3Fesc+u%3Apertenece+%3Fper.%0D%0A++++++%3Fper+u%3Anombre+%3Funiversidad.%0D%0A%7D%7D&output=text&stylesheet=" target="_self" title="Ejecutar Consulta"> 
+<p><a href="http://sparql.verdata.cl/verdata/sparql?query=prefix+u%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%23%3E+%0D%0Aprefix+e%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fescuela%2F%3E+%0D%0A++++SELECT+%3Fnombre+%3Funiversidad%0D%0A++++WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%2F%3E+%0D%0A++++%7B+%3Fesc+a+u%3AEscuelaProfesional.%0D%0A++++++%3Fesc+u%3Anombre+%3Fnombre.++%0D%0A++++++%3Fesc+u%3Apertenece+%3Fper.%0D%0A++++++%3Fper+u%3Anombre+%3Funiversidad.%0D%0A%7D%7D&output=text&stylesheet=" target="_self" title="Ejecutar Consulta"> 
 <font color="white">Ejecutar Consulta</font></a>
 <p><br></p>	
 <li type="circle">	Tercera Consulta </li> 
@@ -78,7 +78,7 @@ prefix e: <http://verdata.cl/graphs/escuela/>
 prefix u: <http://verdata.cl/graphs/computacion#> 
 prefix e: <http://verdata.cl/graphs/escuela/> 
     SELECT ?apepart ?apemat ?name ?sexo ?titulo
-    WHERE { GRAPH <http://example/computacion> 
+    WHERE { GRAPH <http://verdata.cl/graphs/computacion/> 
     { ?acad a u:Academico. 
       ?acad u:TituloGrado ?titulo.
       ?acad u:apellidoMaterno ?apemat .
@@ -88,7 +88,7 @@ prefix e: <http://verdata.cl/graphs/escuela/>
 }}
 order by desc(?titulo)
 </textarea>
-<p><a href="http://sparql.verdata.cl/verdata/sparql?query=prefix+u%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%23%3E+%0D%0Aprefix+e%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fescuela%2F%3E+%0D%0A++++SELECT+%3Fapepart+%3Fapemat+%3Fname+%3Fsexo+%3Ftitulo%0D%0A++++WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fexample%2Fcomputacion%3E+%0D%0A++++%7B+%3Facad+a+u%3AAcademico.+%0D%0A++++++%3Facad+u%3ATituloGrado+%3Ftitulo.%0D%0A++++++%3Facad+u%3AapellidoMaterno+%3Fapemat+.%0D%0A++++++%3Facad+u%3AapellidoPaterno+%3Fapepart.%0D%0A++++++%3Facad+u%3Anombre+%3Fname.+%0D%0A++++++%3Facad+u%3Asexo+%3Fsexo.%0D%0A%7D%7D%0D%0Aorder+by+desc%28%3Ftitulo%29&output=text&stylesheet=" target="_self" title="Ejecutar Consulta">
+<p><a href="http://sparql.verdata.cl/verdata/sparql?query=prefix+u%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%23%3E+%0D%0Aprefix+e%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fescuela%2F%3E+%0D%0A++++SELECT+%3Fapepart+%3Fapemat+%3Fname+%3Fsexo+%3Ftitulo%0D%0A++++WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%2F%3E+%0D%0A++++%7B+%3Facad+a+u%3AAcademico.+%0D%0A++++++%3Facad+u%3ATituloGrado+%3Ftitulo.%0D%0A++++++%3Facad+u%3AapellidoMaterno+%3Fapemat+.%0D%0A++++++%3Facad+u%3AapellidoPaterno+%3Fapepart.%0D%0A++++++%3Facad+u%3Anombre+%3Fname.+%0D%0A++++++%3Facad+u%3Asexo+%3Fsexo.%0D%0A%7D%7D%0D%0Aorder+by+desc%28%3Ftitulo%29&output=text&stylesheet=" target="_self" title="Ejecutar Consulta">
 <font color="white">Ejecutar Consulta</font></a>
 <p><br></p>	
 </ul>	

@@ -5,7 +5,7 @@ sparql(
     // Consulta
     "prefix r: <http://verdata.cl/graphs/computacion#>"+ 
     "SELECT ?tipo (count(?tipo) as ?cant)  "+
-    "WHERE   {graph <http://example/computacion>"+ 
+    "WHERE   {graph <http://verdata.cl/graphs/computacion/>"+ 
     " { ?uni a  r:Universidad. " + 
     "?uni r:tipoU  ?tipo. } }  "+
     "group by ?tipo "+
