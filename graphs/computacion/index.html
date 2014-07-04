@@ -75,9 +75,9 @@ function __doPostBack(eventTarget, eventArgument) {
 </script>
 <script language="JavaScript">
 function Abrir_ventana (lugar) {
-	var enlace0="http://sparql.verdata.cl/verdata/sparql?query=+prefix+u%3A+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%23%3E+%0D%0A+SELECT+%3Funiversidad+%3Furl+%3Fnombre+%0D%0A++++WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fverdata.cl%2Fgraphs%2Fcomputacion%2F%3E+%0D%0A++++%7B+%3Fesc+a+u%3AEscuelaProfesional.%0D%0A++++++%3Fesc+u%3Anombre+%3Fnombre.++%0D%0A++++++%3Fesc+u%3Apertenece+%3Fper.%0D%0A++++++%3Fper+u%3Anombre+%3Funiversidad.%0D%0A++++++%3Fper+u%3AeUniversidad+%3Furl.%0D%0A++++++%3Fper+u%3Asede+%3Fsede.+%0D%0A+++FILTER%28regex%28%3Fsede%2C+%27"+lugar+"%27%29%29.+%7D%7D+&output=text&stylesheet=";
+	var enlace0="universidades.html?"+lugar;
 
-window.open(enlace0,"Universidades y Escuelas Profesionales","toolbar=0,location=0,width=1008, height=465, top=85, left=140");
+window.open(enlace0,"Universidades y Escuelas Profesionales","toolbar=0,location=0,width=920, height=465, top=85, left=140");
 }
 </script>
 
