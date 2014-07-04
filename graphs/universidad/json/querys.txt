@@ -1,0 +1,36 @@
+ prefix u: <http://verdata.cl/graphs/computacion#> 
+ SELECT ?universidad ?url ?nombre 
+    WHERE { GRAPH <http://example/computacion> 
+    { ?esc a u:EscuelaProfesional.
+      ?esc u:nombre ?nombre.  
+      ?esc u:pertenece ?per.
+      ?per u:nombre ?universidad.
+      ?per u:eUniversidad ?url.
+      ?per u:sede ?sede. 
+   FILTER(regex(?sede, 'Lima')). }} 
+******************************
+prefix u: <http://verdata.cl/graphs/computacion#> 
+prefix e: <http://verdata.cl/graphs/escuela/> 
+    SELECT ?apepart ?apemat ?name ?titulo ?publ ?cv
+    WHERE { GRAPH <http://verdata.cl/graphs/computacion/> 
+    { ?acad a u:Academico. 
+      ?acad u:TituloGrado ?titulo.
+      ?acad u:apellidoMaterno ?apemat .
+      ?acad u:apellidoPaterno ?apepart.
+      ?acad u:nombre ?name. 
+      ?acad u:ePublicacion ?publ.
+?acad u:eCurriculum ?cv
+      FILTER(regex(?apepart, "" )).  
+}}
+order by desc(?titulo)
+
+**********************************
+prefix u: <http://verdata.cl/graphs/computacion#> 
+prefix e: <http://verdata.cl/graphs/escuela/> 
+    SELECT ?nombre ?curname 
+    WHERE { GRAPH <http://verdata.cl/graphs/computacion/> 
+    { ?esc a u:EscuelaProfesional.
+      ?esc u:nombre ?nombre.  
+      ?esc u:escuelaCurso ?cur.
+     ?cur u:nombre ?curname.
+}}

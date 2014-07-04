@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+<meta charset="utf-8" />
+<!-- Google Chrome Frame open source plug-in brings Google Chrome's open web technologies and speedy JavaScript engine to Internet Explorer-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Cursos</title>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script> 
+<link rel="stylesheet" href="style/personas.css" />
+<link rel="stylesheet" href="style/personas1.css" />  
+<link rel="stylesheet" href="style/general.css" />
+<script src="json/jquery-2.0.3.min.js"></script>
+<script src="json/verdata.js"></script>
+<script src="json/cursos.js"></script>
+<script src="json/carrera.js"></script>
+ <script src="json/comun.js"></script>
+ </head>
+ <body class="fondoAzul">
+<div id="wrapper-content" role="main" >        
+<section id="browse-by" role="region" >
+    <nav role="navigation">
+        <ul id="browse-classes">
+               <nav id="listaUniv1">
+               </nav>    
+        </ul>
+        <nav id="alpha-browse-container" role="navigation">
+            <h3 class="selected-class"></h3>
+            <ul id="alpha-browse-individuals">
+                <li><a href="javascript:listaCurso('^')" class="selected" data-alpha="all" title="select all">All</a></li>
+                    <li><a href="javascript:listaCurso('^A')" title="Lista cursos con nombres que inician con A">A</a></li>
+                    <li><a href="javascript:listaCurso('^B')" title="Lista cursos con nombres que inician con B">B</a></li>
+                    <li><a href="javascript:listaCurso('^C')" title="Lista cursos con nombres que inician con C">C</a></li>
+                    <li><a href="javascript:listaCurso('^D')" title="Lista cursos con nombres que inician con D">D</a></li>
+                    <li><a href="javascript:listaCurso('^E')" title="Lista cursos con nombres que inician con E">E</a></li>
+                    <li><a href="javascript:listaCurso('^F')" title="Lista cursos con nombres que inician con F">F</a></li>
+                    <li><a href="javascript:listaCurso('^G')" title="Lista cursos con nombres que inician con G">G</a></li>
+                    <li><a href="javascript:listaCurso('^H')" title="Lista cursos con nombres que inician con H">H</a></li>
+                    <li><a href="javascript:listaCurso('^I')" title="Lista cursos con nombres que inician con I">I</a></li>
+                    <li><a href="javascript:listaCurso('^J')" title="Lista cursos con nombres que inician con J">J</a></li>
+                    <li><a href="javascript:listaCurso('^K')" title="Lista cursos con nombres que inician con K">K</a></li>
+                    <li><a href="javascript:listaCurso('^L')" title="Lista cursos con nombres que inician con L">L</a></li>
+                    <li><a href="javascript:listaCurso('^M')" title="Lista cursos con nombres que inician con M">M</a></li>
+                    <li><a href="javascript:listaCurso('^N')" title="Lista cursos con nombres que inician con N">N</a></li>
+                    <li><a href="javascript:listaCurso('^O')" title="Lista cursos con nombres que inician con O">O</a></li>
+                    <li><a href="javascript:listaCurso('^P')" title="Lista cursos con nombres que inician con P">P</a></li>
+                    <li><a href="javascript:listaCurso('^Q')" title="Lista cursos con nombres que inician con Q">Q</a></li>
+                    <li><a href="javascript:listaCurso('^R')" title="Lista cursos con nombres que inician con R">R</a></li>
+                    <li><a href="javascript:listaCurso('^S')" title="Lista cursos con nombres que inician con S">S</a></li>
+                    <li><a href="javascript:listaCurso('^T')" title="Lista cursos con nombres que inician con T">T</a></li>
+                    <li><a href="javascript:listaCurso('^U')" title="Lista cursos con nombres que inician con U">U</a></li>
+                    <li><a href="javascript:listaCurso('^V')" title="Lista cursos con nombres que inician con V">V</a></li>
+                    <li><a href="javascript:listaCurso('^W')" title="Lista cursos con nombres que inician con W">W</a></li>
+                    <li><a href="javascript:listaCurso('^X')" title="Lista cursos con nombres que inician con X">X</a></li>
+                    <li><a href="javascript:listaCurso('^Y')" title="Lista cursos con nombres que inician con Y">Y</a></li>
+                    <li><a href="javascript:listaCurso('^Z')" title="Lista cursos con nombres que inician con Z">Z</a></li>
+            </ul>
+        </nav>
+    </nav>
+    
+    <section id="individuals-in-class" role="region">
+    <nav id="listaUniv" >
+      </nav>
+      <div id="graficos"></div>
+        
+    </section>
+</section>
+</section>
+ </body>
+</html>
