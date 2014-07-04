@@ -9,7 +9,10 @@
 </title>
 <meta content="img/ucv.jpg" property="og:image" />
 <meta name="description" /> 
-<script type="text/javascript" src="http://www.google.com/jsapi"></script> 
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="json/jquery-2.0.3.min.js"></script>
+  <script src="json/verdata.js"></script>
+  <script src="json/mapsciudad.js"></script> 
 	<link rel="stylesheet" href="style/normalize.css" />
 	<link rel="stylesheet" href="style/main.css" />
 	<link rel="stylesheet" href="style/general.css" />
@@ -21,19 +24,21 @@
 				<nav id="menuSuperior">
 					<ul>
 						<li>
-                         <span id="LblPopup"></span> 
-                         <a href="index.html" target="_self">Inicio</a></li>
-						<li><a href="documentacion.html" target="_self">Documentacion</a></li>
+                            <span id="LblPopup"></span>
+                        <a href="index.html" target="_self">Inicio</a></li>
+                        <li><a href="escuelas.html" target="_self">Escuelas</a></li>
+						<li><a href="personas.html" target="_self">Personas</a></li>
+						<li><a href="cursos.html" target="_self">Cursos</a></li>
 						<li><a href="ontologia.html" target="_self">Ontologias</a></li>
 						<li><a href="sparql.html" target="_self">SPARQL</a></li> 
 						<li>Contactanos</li>
-						<li><a id="facebook" class="ir" href="https://www.facebook.com/Peru" target="_blank">Facebook</a></li>
+						<li><a id="facebook" class="ir" href="https://www.facebook.com/computacionperu" target="_blank">Facebook</a></li>
 					</ul>
 				</nav><!-- menuSuperior -->
 				<div id="presentacion"> 
-				  <div id="ontologias" class="et ontologia">
-						 
-					</div>
+				 
+					
+<div id="chart_div" style="width: 400px; height: 500px;" class="et mapaescuela"></div>
 				</div><!--Presentacion -->
 				<div id="pie" class="quiebre">
 					<p id="copy">2014 Departamento de Computacion - Universidad de Chile</p>

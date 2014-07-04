@@ -1,0 +1,99 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link rel="shortcut icon" href="Imagenes/iconewucv.ico" type="image/ico" />
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>
+	Universidades del Peru
+</title>
+<meta content="img/ucv.jpg" property="og:image" />
+<meta name="description" /> 
+<script type="text/javascript" src="http://www.google.com/jsapi"></script> 
+<link rel="stylesheet" href="style/personas.css" />
+<link rel="stylesheet" href="style/personas1.css" />  
+<link rel="stylesheet" href="style/general.css" />
+<script src="json/jquery-2.0.3.min.js"></script>
+<script src="json/verdata.js"></script>
+<script src="json/cursos.js"></script>
+<script src="json/carrera.js"></script>
+ <script src="json/comun.js"></script>
+ </head>
+<body class="fondoAzul">
+ <div>
+ <div id="todo">
+			<div id="portada00" >
+				<nav id="menuSuperior">
+					<ul>
+						<li>
+                            <span id="LblPopup"></span>
+                        <a href="index.html" target="_self">Inicio</a></li>
+                        <li><a href="escuelas.html" target="_self">Escuelas</a></li>
+						<li><a href="personas.html" target="_self">Personas</a></li>
+						<li><a href="cursos.html" target="_self">Cursos</a></li>
+						<li><a href="ontologia.html" target="_self">Ontologias</a></li>
+						<li><a href="sparql.html" target="_self">SPARQL</a></li> 
+						<li>Contactanos</li>
+						<li><a id="facebook" class="ir" href="https://www.facebook.com/computacionperu" target="_blank">Facebook</a></li>
+					</ul>
+				</nav><!-- menuSuperior -->
+				<div id="presentacion"> 
+				 <div id="wrapper-content" role="main">        
+                        <section id="browse-by" role="region" >
+                            <nav role="navigation">
+                                <ul id="browse-classes">
+                                       <nav id="listaUniv1">
+                                       </nav>    
+                                </ul>
+                                <nav id="alpha-browse-container" role="navigation">
+                                    <h3 class="selected-class"></h3>
+                                    <ul id="alpha-browse-individuals">
+                                        <li><a href="javascript:listaPerson('')" class="selected" data-alpha="all" title="select all">All</a></li>
+                                            <li><a href="javascript:listaPerson('A')" title="Lista personas con nombres que inician con A">A</a></li>
+                                            <li><a href="javascript:listaPerson('B')" title="Lista personas con nombres que inician con B">B</a></li>
+                                            <li><a href="javascript:listaPerson('C')" title="Lista personas con nombres que inician con C">C</a></li>
+                                            <li><a href="javascript:listaPerson('D')" title="Lista personas con nombres que inician con D">D</a></li>
+                                            <li><a href="javascript:listaPerson('E')" title="Lista personas con nombres que inician con E">E</a></li>
+                                            <li><a href="javascript:listaPerson('F')" title="Lista personas con nombres que inician con F">F</a></li>
+                                            <li><a href="javascript:listaPerson('G')" title="Lista personas con nombres que inician con G">G</a></li>
+                                            <li><a href="javascript:listaPerson('H')" title="Lista personas con nombres que inician con H">H</a></li>
+                                            <li><a href="javascript:listaPerson('I')" title="Lista personas con nombres que inician con I">I</a></li>
+                                            <li><a href="javascript:listaPerson('J')" title="Lista personas con nombres que inician con J">J</a></li>
+                                            <li><a href="javascript:listaPerson('K')" title="Lista personas con nombres que inician con K">K</a></li>
+                                            <li><a href="javascript:listaPerson('L')" title="Lista personas con nombres que inician con L">L</a></li>
+                                            <li><a href="javascript:listaPerson('M')" title="Lista personas con nombres que inician con M">M</a></li>
+                                            <li><a href="javascript:listaPerson('N')" title="Lista personas con nombres que inician con N">N</a></li>
+                                            <li><a href="javascript:listaPerson('O')" title="Lista personas con nombres que inician con O">O</a></li>
+                                            <li><a href="javascript:listaPerson('P')" title="Lista personas con nombres que inician con P">P</a></li>
+                                            <li><a href="javascript:listaPerson('Q')" title="Lista personas con nombres que inician con Q">Q</a></li>
+                                            <li><a href="javascript:listaPerson('R')" title="Lista personas con nombres que inician con R">R</a></li>
+                                            <li><a href="javascript:listaPerson('S')" title="Lista personas con nombres que inician con S">S</a></li>
+                                            <li><a href="javascript:listaPerson('T')" title="Lista personas con nombres que inician con T">T</a></li>
+                                            <li><a href="javascript:listaPerson('U')" title="Lista personas con nombres que inician con U">U</a></li>
+                                            <li><a href="javascript:listaPerson('V')" title="Lista personas con nombres que inician con V">V</a></li>
+                                            <li><a href="javascript:listaPerson('W')" title="Lista personas con nombres que inician con W">W</a></li>
+                                            <li><a href="javascript:listaPerson('X')" title="Lista personas con nombres que inician con X">X</a></li>
+                                            <li><a href="javascript:listaPerson('Y')" title="Lista personas con nombres que inician con Y">Y</a></li>
+                                            <li><a href="javascript:listaPerson('Z')" title="Lista personas con nombres que inician con Z">Z</a></li>
+                                    </ul>
+                                </nav>
+                            </nav>
+                            
+                            <section id="individuals-in-class" role="region">
+                            <nav id="listaUniv" >
+                              </nav>
+                              <div id="grafico"></div>
+                                
+                            </section>
+                        </section> 
+                    </div>
+				</div><!--Presentacion -->
+				<div id="pie" class="quiebre">
+					<p id="copy">2014 Departamento de Computacion - Universidad de Chile</p>
+				</div>
+			</div><!-- portada -->
+		</div><!-- todo -->
+       
+    </div>
+ </body>
+</html>
