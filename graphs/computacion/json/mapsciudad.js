@@ -27,7 +27,7 @@ function UPP(dataU)
      t[0]=['Lat', 'Long', 'Name'];
       for (i = 1; i <= dataU.results.bindings.length; i++)
       {
-        t[i]=[parseFloat(dataU.results.bindings[i-1].lat.value),parseFloat(dataU.results.bindings[i-1].lon.value),dataU.results.bindings[i-1].nombre.value+" <a href='"+dataU.results.bindings[i-1].url.value+"' target='_brank'> "+dataU.results.bindings[i-1].url.value+"</a>"];        
+        t[i]=[parseFloat(dataU.results.bindings[i-1].lat.value),parseFloat(dataU.results.bindings[i-1].lon.value)," <a href='"+dataU.results.bindings[i-1].url.value+"' target='_brank'> "+utf8_decode(dataU.results.bindings[i-1].nombre.value)+"</a>"];        
       } 
 
      var data = google.visualization.arrayToDataTable(t);

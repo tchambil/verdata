@@ -19,7 +19,7 @@
 <script src="json/carrera.js"></script>
  <script src="json/comun.js"></script>
  </head>
-<body class="fondoAzul">
+<body class="fondoAzul" onload="listaCurso('');">
  <div>
  <div id="todo">
 			<div id="portada00" >
@@ -58,41 +58,42 @@
                                 <nav id="alpha-browse-container" role="navigation">
                                     <h3 class="selected-class"></h3>
                                     <ul id="alpha-browse-individuals">
-                                        <li><a href="javascript:listaPerson('')" class="selected" data-alpha="all" title="select all">All</a></li>
-                                            <li><a href="javascript:listaPerson('A')" title="Lista personas con nombres que inician con A">A</a></li>
-                                            <li><a href="javascript:listaPerson('B')" title="Lista personas con nombres que inician con B">B</a></li>
-                                            <li><a href="javascript:listaPerson('C')" title="Lista personas con nombres que inician con C">C</a></li>
-                                            <li><a href="javascript:listaPerson('D')" title="Lista personas con nombres que inician con D">D</a></li>
-                                            <li><a href="javascript:listaPerson('E')" title="Lista personas con nombres que inician con E">E</a></li>
-                                            <li><a href="javascript:listaPerson('F')" title="Lista personas con nombres que inician con F">F</a></li>
-                                            <li><a href="javascript:listaPerson('G')" title="Lista personas con nombres que inician con G">G</a></li>
-                                            <li><a href="javascript:listaPerson('H')" title="Lista personas con nombres que inician con H">H</a></li>
-                                            <li><a href="javascript:listaPerson('I')" title="Lista personas con nombres que inician con I">I</a></li>
-                                            <li><a href="javascript:listaPerson('J')" title="Lista personas con nombres que inician con J">J</a></li>
-                                            <li><a href="javascript:listaPerson('K')" title="Lista personas con nombres que inician con K">K</a></li>
-                                            <li><a href="javascript:listaPerson('L')" title="Lista personas con nombres que inician con L">L</a></li>
-                                            <li><a href="javascript:listaPerson('M')" title="Lista personas con nombres que inician con M">M</a></li>
-                                            <li><a href="javascript:listaPerson('N')" title="Lista personas con nombres que inician con N">N</a></li>
-                                            <li><a href="javascript:listaPerson('O')" title="Lista personas con nombres que inician con O">O</a></li>
-                                            <li><a href="javascript:listaPerson('P')" title="Lista personas con nombres que inician con P">P</a></li>
-                                            <li><a href="javascript:listaPerson('Q')" title="Lista personas con nombres que inician con Q">Q</a></li>
-                                            <li><a href="javascript:listaPerson('R')" title="Lista personas con nombres que inician con R">R</a></li>
-                                            <li><a href="javascript:listaPerson('S')" title="Lista personas con nombres que inician con S">S</a></li>
-                                            <li><a href="javascript:listaPerson('T')" title="Lista personas con nombres que inician con T">T</a></li>
-                                            <li><a href="javascript:listaPerson('U')" title="Lista personas con nombres que inician con U">U</a></li>
-                                            <li><a href="javascript:listaPerson('V')" title="Lista personas con nombres que inician con V">V</a></li>
-                                            <li><a href="javascript:listaPerson('W')" title="Lista personas con nombres que inician con W">W</a></li>
-                                            <li><a href="javascript:listaPerson('X')" title="Lista personas con nombres que inician con X">X</a></li>
-                                            <li><a href="javascript:listaPerson('Y')" title="Lista personas con nombres que inician con Y">Y</a></li>
-                                            <li><a href="javascript:listaPerson('Z')" title="Lista personas con nombres que inician con Z">Z</a></li>
+                                        <li><a href="javascript:listaCurso('')" class="selected" data-alpha="all" title="select all">All</a></li>
+                                            <li><a href="javascript:listaCurso('^A')" title="Lista personas con nombres que inician con A">A</a></li>
+                                            <li><a href="javascript:listaCurso('^B')" title="Lista personas con nombres que inician con B">B</a></li>
+                                            <li><a href="javascript:listaCurso('^C')" title="Lista personas con nombres que inician con C">C</a></li>
+                                            <li><a href="javascript:listaCurso('^D')" title="Lista personas con nombres que inician con D">D</a></li>
+                                            <li><a href="javascript:listaCurso('^E')" title="Lista personas con nombres que inician con E">E</a></li>
+                                            <li><a href="javascript:listaCurso('^F')" title="Lista personas con nombres que inician con F">F</a></li>
+                                            <li><a href="javascript:listaCurso('^G')" title="Lista personas con nombres que inician con G">G</a></li>
+                                            <li><a href="javascript:listaCurso('^H')" title="Lista personas con nombres que inician con H">H</a></li>
+                                            <li><a href="javascript:listaCurso('^I')" title="Lista personas con nombres que inician con I">I</a></li>
+                                            <li><a href="javascript:listaCurso('^J')" title="Lista personas con nombres que inician con J">J</a></li>
+                                            <li><a href="javascript:listaCurso('^K')" title="Lista personas con nombres que inician con K">K</a></li>
+                                            <li><a href="javascript:listaCurso('^L')" title="Lista personas con nombres que inician con L">L</a></li>
+                                            <li><a href="javascript:listaCurso('^M')" title="Lista personas con nombres que inician con M">M</a></li>
+                                            <li><a href="javascript:listaCurso('^N')" title="Lista personas con nombres que inician con N">N</a></li>
+                                            <li><a href="javascript:listaCurso('^O')" title="Lista personas con nombres que inician con O">O</a></li>
+                                            <li><a href="javascript:listaCurso('^P')" title="Lista personas con nombres que inician con P">P</a></li>
+                                            <li><a href="javascript:listaCurso('^Q')" title="Lista personas con nombres que inician con Q">Q</a></li>
+                                            <li><a href="javascript:listaCurso('^R')" title="Lista personas con nombres que inician con R">R</a></li>
+                                            <li><a href="javascript:listaCurso('^S')" title="Lista personas con nombres que inician con S">S</a></li>
+                                            <li><a href="javascript:listaCurso('^T')" title="Lista personas con nombres que inician con T">T</a></li>
+                                            <li><a href="javascript:listaCurso('^U')" title="Lista personas con nombres que inician con U">U</a></li>
+                                            <li><a href="javascript:listaCurso('^V')" title="Lista personas con nombres que inician con V">V</a></li>
+                                            <li><a href="javascript:listaCurso('^W')" title="Lista personas con nombres que inician con W">W</a></li>
+                                            <li><a href="javascript:listaCurso('^X')" title="Lista personas con nombres que inician con X">X</a></li>
+                                            <li><a href="javascript:listaCurso('^Y')" title="Lista personas con nombres que inician con Y">Y</a></li>
+                                            <li><a href="javascript:listaCurso('^Z')" title="Lista personas con nombres que inician con Z">Z</a></li>
                                     </ul>
                                 </nav>
                             </nav>
                             
                             <section id="individuals-in-class" role="region">
                             <nav id="listaUniv" >
+                            <div id="grafico"></div>
                               </nav>
-                              <div id="grafico"></div>
+                              
                                 
                             </section>
                         </section> 

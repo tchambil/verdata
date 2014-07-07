@@ -60,6 +60,7 @@ function Carga(data) {
   function limpiar()
  {
     $('nav#listaUniv ul').remove();
+     $('#grafico').remove();
  }
 
 
@@ -106,31 +107,35 @@ function Carga(data) {
     });
   function limpiar()
  {
-    $('nav#listaUniv ul').remove();
+    $('nav#listaUniv ul').remove(); 
+    $('#grafico').remove();
  }
 
 
-}
+} 
 google.load('visualization', '1.0', {packages:['table','corechart']});
-sparql(
+ 
     // Consulta
-   "prefix u: <http://verdata.cl/graphs/computacion#> " +
+    function mostrargrafico(){
+  rem="prefix u: <http://verdata.cl/graphs/computacion#> " +
    "SELECT ?sexo (count(*) as ?cant) " +
    " WHERE { GRAPH <http://verdata.cl/graphs/computacion/> " +
    "{ ?acad a u:Academico. " +
    " ?acad u:sexo ?sexo.  }} " +
-   "group by (?sexo)",
+   "group by (?sexo)"  ;
 
+   sparql(
+    rem   ,
     // Acción
   function (dataU) 
   {
     UPP(dataU);
   }
-  );
-google.setOnLoadCallback(draChart);
+  ); 
+} 
 function UPP(dataU) 
   {   
-      var options = {'width':550,'height':550 ,'backgroundColor':'transparent',  is3D: true, legend: {position: 'none', textStyle: {color: 'white', fontSize: 10}}};
+      var options = {'width':500,'height':500 ,'backgroundColor':'transparent',  is3D: true, legend: {position: 'none', textStyle: {color: 'white', fontSize: 10}}};
      var chart = new google.visualization.PieChart(document.getElementById('grafico'));
      datax =  new google.visualization.DataTable();
       datax.addColumn('string', 'T1');
