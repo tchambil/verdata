@@ -35,14 +35,24 @@
 						<li><a id="facebook" class="ir" href="https://www.facebook.com/computacionperu" target="_blank">Facebook</a></li>
 					</ul>
 				</nav><!-- menuSuperior -->
-				<div id="presentacion"> 
+                                <div id="title">
+					<div id="titulos" class="et title">
+ 						
+					</div>
+						<div class="et subtitle" >
+						 	 
+                                                    <p>Accede a un conjunto de datos en formatos que permiten </p>
+						 		<p> su manipulación y reutilización en desarrollos informáticos.</p>
+						 		
+				</div>
+				<div id="presentacion2"> 
 				 <div id="consultas" class="et sparql">
 				 <form  style="margin:0px"smethod="post">
 				   <ul>
 <li type="circle">	Primera Consulta			</li>
 <p> Mostrar cantidad de Universidades por departamento
 <P>
-<textarea readonly NAME="consulta1" cols=120 rows=10   style="color: red; background-color: lightyellow">
+<textarea readonly NAME="consulta1" cols=80 rows=10   style="color: red; background-color: lightyellow">
  prefix r: <http://verdata.cl/graphs/computacion#> 
     SELECT ?sede  (count(?sede) as ?cant) 
     WHERE   {graph <http://verdata.cl/graphs/computacion/> 
@@ -59,7 +69,7 @@
    
 <p> Listar todas Escuelas profesionales de Computacion de Peru y las Universidades que pertenece
 <p>
-<textarea readonly NAME="consulta2" cols=120 rows=10 style="color: red; background-color: lightyellow">
+<textarea readonly NAME="consulta2" cols=80 rows=10 style="color: red; background-color: lightyellow">
 prefix u: <http://verdata.cl/graphs/computacion#> 
 prefix e: <http://verdata.cl/graphs/escuela/> 
     SELECT ?nombre ?universidad
@@ -76,7 +86,7 @@ prefix e: <http://verdata.cl/graphs/escuela/>
 <li type="circle">	Tercera Consulta </li> 
 <p> Listar todos docentes de Computacion del Peru con su titulos obtenidos
 <p>
-<textarea readonly NAME="consulta2" cols=120 rows=10 style="color: red; background-color: lightyellow">
+<textarea readonly NAME="consulta2" cols=80 rows=10 style="color: red; background-color: lightyellow">
 prefix u: <http://verdata.cl/graphs/computacion#> 
 prefix e: <http://verdata.cl/graphs/escuela/> 
     SELECT ?apepart ?apemat ?name ?sexo ?titulo

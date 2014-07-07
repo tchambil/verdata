@@ -72,10 +72,10 @@ h5 {
 /* WRAPPER CONTENT------>  */
 #wrapper-content {
     clear: both;
-    width: 930px;
-    margin: 0 auto;
+    width: 900px;
+    margin: 60px auto;
     background: #fff;
-    min-height: 550px;
+    min-height: 450px;
     padding: 20px;
 }
 
@@ -171,6 +171,8 @@ p{
 /* BROWSE BY ------>  */
 #browse-by {
     width: 920px;
+    height: 450px;
+    overflow-y: auto;
 }
 #browse-by h2 {
     background: #5e6363;
@@ -241,9 +243,10 @@ nav#alpha-browse-container {
 }
 /* BROWSE INDIVIDUALS------>  */
 #individuals-in-class {
-    width: 629px;
+    width: 620px;
     border: 1px solid #dde4e3;
     background-color: #fff;
+    color: #5e6363;
 }
 #individuals-in-class li.individual {
     border-bottom: 1px solid #dde4e3;

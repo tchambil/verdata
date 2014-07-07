@@ -29,20 +29,28 @@ body{
 
 #todo{
 	color: #ffffff;
-	margin-top: 40px;
+	margin-top: 0px;
 }
 
 #portada{
 	width: 940px;
 	height:600px;
-	padding: 20px;
+	padding: 15px;
 	margin: 0 auto;
 	background: url(../img/mapa.png) no-repeat 20px 20px;
 }
+#portada00{
+	width: 940px;
+	/* height:600px; */
+	padding: 10px;
+	margin: 0 auto;
+	
+}
 #ontologias{
-	width: 900px;
-	height:750px; 
-	background: url(../img/clases.png) no-repeat 20px 20px;
+	display:block;
+	float:left;
+	margin: 20px 90px;
+	border: 5px #000 solid;
 	 
 }
 #java{
@@ -52,7 +60,7 @@ body{
 	padding: 20px;
 	background: url(../img/java.png) no-repeat 20px 20px;
 }
-}
+
 /*****************************************************************/
 #menuSuperior{
 	width: 940px;
@@ -149,12 +157,13 @@ body{
 .sdSobre{
 	background: #00ADFF;
 }
-.titulojava{top: 85px;	left: 700px;}
-.resultado{top: 110px;	left: 700px;}
-.sparql{top: 50px;	left: 100px;}
-.mapaescuela{top: 50px;	left: 300px;}
-.title{top: 50px;	left: 10px;}
-.subtitle{top: 100px;	left: 30px;}
+.titulojava{margin-top: 20px;	left: 670px;}
+.resultado{margin-top: 30px;	left: 650px; /* float:left; */}
+.sparql{margin-top: 80px;	width: 450px;float:left;}
+.mapaescuela{/* top: 50px; */	/* left: 300px; */margin-top: 50px;
+    border: 2px #000 solid}
+.title{top: 20px;	left: 10px;}
+.subtitle{top: 60px;	left: 30px;}
 
 .titlechart{top: 585px;	left: 50px;}
 .chart{top: 350px;	left: -40px;}
@@ -246,19 +255,35 @@ body{
 /*****************************************************************/
 #presentacion{
 	float: left;
-	width: 470px;
+	width: 450px;
 	height: 555px;
 }
-
+#presentacion2{
+	float: left;
+	width: 960px;
+	height: 555px;
+}
+#presentacion3{
+	float: left;
+	width: 960px;
+	margin-top:50px;
+	
+}
+#listaUniv2{
+    height: 250px;
+    width: 430px; 
+    overflow-y: auto; 
+}
 #portada #logoUCV{
-	width: 240px; 
-	height: 40px;
-	background: url(../img/logoUCV.png) no-repeat;
-	margin: 85px 0 0 0;
+	width: 418px; 
+	height: 109px;
+	
+	margin: 40px 0 0 0;
+	
 }
 
 #portada #titulo{
-	margin: 70px 0 0 0;
+	margin: 20px 10px 0 0;
 	width: 415px; 
 	height: 14px;
 	background: url(../img/titulo.png) no-repeat;
@@ -267,8 +292,14 @@ body{
 	margin: 100px -10 -10 10;
 	width: 415px; 
 	height: 50px;
-	background: url(../img/logoUCV.png) no-repeat;
+	background: url(../img/logoUCV2.png) no-repeat;
 
+}
+
+#imgUbica{
+    display: block;
+    float: left;
+    margin: 150px 0 0 0;
 }
  
 
@@ -362,6 +393,10 @@ body{
 
 #pag_contacto #introduccion{
 	margin: 10px 0 0 0;
+}
+
+#des{
+    margin-top: 10px;
 }
 
 #todos{

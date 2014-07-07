@@ -207,11 +207,11 @@ nav#alpha-browse-container {
 }
 /* BROWSE INDIVIDUALS------>  */
 #individuals-in-class {
-    float: right;
+    float: left;
     width: 68%;
-    padding-bottom: 30px;
+    padding: 5px;
     margin-bottom: 30px;
-    margin-right: 17px;
+    margin-right: 0px;
     min-height: 170px;
 }
 h3.selected-class {
